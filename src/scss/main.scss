@@ -1,9 +1,16 @@
-@import 'base/normalize';
+@import 'base/fuse';
 
-* {
-    font-family: "McClatchy Sans", Helvetica, Arial, sans-serif;
-}
-
-h1 {
-    color: red;
+.lead-asset {
+    width: 100vw;
+    position: relative;
+    img {
+        width: 100vw;
+    }
+    h1 {
+        font-size: 9vw;
+        color: #fff;
+        position: absolute;
+        bottom: 20%;
+        left: 5%;
+    }
 }
