@@ -10,7 +10,7 @@ git clone https://github.com/aaronalbright/mccustom-starter`
 yarn install
 ```
 
-## To start a server at `localhost:3000
+## To start a server at `localhost:3000`
 ```
 yarn start
 ```
