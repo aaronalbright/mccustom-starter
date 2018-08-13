@@ -15,8 +15,8 @@
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000 -d build",
-    "build": "parcel build src/index.njk --public-url ./dist/ -d build/public",
-    "cue": "parcel build src/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue",
+    "build": "parcel build src/html/index.njk --public-url ./dist/ -d build/dist",
+    "cue": "parcel build src/html/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue",
     "text": "googledoc-to-json 1eeqEJot86xnJvtEWntN3FqMESoFN1wT5UQcLK5DyXzs -c drive.json -o ./src/data.json"
   }
 }
