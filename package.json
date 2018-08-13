@@ -11,8 +11,8 @@
     "parcel-plugin-nunjucks": "git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git"
   },
   "config": {
-    "url": "https://media.miamiherald.com/static/media/projects/2018/",
-    "docID": "1eeqEJot86xnJvtEWntN3FqMESoFN1wT5UQcLK5DyXzs"
+    "url": "[MEDIA SERVER PATH]",
+    "docID": "[GOOGLE DOC ID GOES HERE]"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000 -d build",
