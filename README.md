@@ -6,7 +6,7 @@ Built with [Parcel.js](https://parceljs.org/).
 ## Install
 
 ```
-git clone https://github.com/aaronalbright/mccustom-starter`
+git clone https://github.com/aaronalbright/mccustom-starter
 yarn install
 ```
 
