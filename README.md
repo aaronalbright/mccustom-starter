@@ -1,5 +1,7 @@
 # McCustom Starter
-Empty shell for generatic static sites to be used on McClatchy Sinclair pages
+Basic static site builder to be used on McClatchy Sinclair pages.
+
+Built with [Parcel.js](https://parceljs.org/).
 
 ## Install
 
