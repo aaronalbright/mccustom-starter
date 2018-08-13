@@ -4,19 +4,20 @@
   "license": "MIT",
   "dependencies": {
     "babel-preset-env": "^1.7.0",
-    "eslint": "^4.19.1",
+    "eslint": "^5.3.0",
     "node-sass": "^4.9.0",
     "nunjucks": "^3.1.3",
     "parcel-bundler": "^1.9.1",
     "parcel-plugin-nunjucks": "git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git"
   },
   "config": {
-    "url": "https://media.miamiherald.com/static/media/projects/2018/"
+    "url": "https://media.miamiherald.com/static/media/projects/2018/",
+    "docID": "1eeqEJot86xnJvtEWntN3FqMESoFN1wT5UQcLK5DyXzs"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000 -d build",
     "build": "parcel build src/html/index.njk --public-url ./dist/ -d build/dist",
     "cue": "parcel build src/html/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue",
-    "text": "googledoc-to-json 1eeqEJot86xnJvtEWntN3FqMESoFN1wT5UQcLK5DyXzs -c drive.json -o ./src/data.json"
+    "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/context.json"
   }
 }
