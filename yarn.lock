@@ -3325,9 +3325,9 @@ parcel-bundler@^1.9.1:
     v8-compile-cache "^2.0.0"
     ws "^5.1.1"
 
-"parcel-plugin-nunjucks@git+https://git@github.com/wind930/parcel-plugin-nunjucks.git":
+"parcel-plugin-nunjucks@git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git":
   version "1.0.5"
-  resolved "git+https://git@github.com/wind930/parcel-plugin-nunjucks.git#1ec0f7dae580c3cb68ae011351a19ca0242dfbb9"
+  resolved "git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git#540933268497dac92601633d4b51496fa59d6bcb"
   dependencies:
     cosmiconfig "^5.0.5"
     klaw-sync "^3.0.2"
