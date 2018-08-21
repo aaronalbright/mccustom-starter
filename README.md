@@ -32,13 +32,15 @@ yarn start
 ```
 yarn build
 ```
-Places files in `./build/public`
+Builds files into `./build/public`
 
 ## Build a static site with relative links for CUE
 ```
 yarn cue
 ```
-Places files in `./cue`
+Builds files into `./cue`
+
+**`config.url` must be set in `package.json`**
 
 ## Fetch Google Doc in AML format
 _Requires `drive.json` setup_
@@ -46,6 +48,8 @@ _Requires `drive.json` setup_
 yarn text
 ```
 Outputs into `./src/html/global.json`
+
+**`config.docID` must be set in `package.json`**
 
 
 
