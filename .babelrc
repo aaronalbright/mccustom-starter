@@ -1,13 +1,5 @@
 {
   "presets": [
-    [
-      "env",
-      {
-        "targets": {
-          "browsers": ["defaults"]
-        },
-        "loose": true
-      }
-    ]
+    "@babel/preset-env"
   ]
 }
