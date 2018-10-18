@@ -1,5 +1,5 @@
 {
-  "name": "mccustom-starter",
+  "name": "florence-lp",
   "version": "1.0.0",
   "license": "MIT",
   "dependencies": {
@@ -14,7 +14,7 @@
     "docID": "[GOOGLE DOC ID GOES HERE]"
   },
   "scripts": {
-    "start": "parcel src/html/index.njk",
+    "start": "parcel src/html/index.njk -p 3000",
     "cue": "parcel build src/html/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue",
     "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/context.json"
   },

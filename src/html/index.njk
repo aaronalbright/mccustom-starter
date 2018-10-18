@@ -2,7 +2,28 @@
 
 {%block content%} 
 <link rel="stylesheet" href="../scss/main.scss"/>
+<div class="lp-header">
+</div>
 
-<h1>Hello, {{user}}. You're looking well today.</h1>
+<div class="lp-content">
+    <div class="lp-hero-wrapper">
+        <div class="lp-hero">
+            <span class="lp-hero__impact">TOP STORY</span>
+        </div>
+    </div>
+    
+    <div class="selector-wrapper">
+        <h3 class="content__header">Latest News</h3>
+    </div>
+    <div class="lp-story-cards">
+        <div class="subscribe-box" style="display: none;">
+            <h4>#READLOCAL</h4>
+            <p>Support journalism that makes a difference.</p><a class="subscribe-btn" href="https://account.sanluisobispo.com/static/subscribe">SUBSCRIBE</a>
+        </div>
+    </div>
+</div>
 
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+<script src="../js/main.js"></script>
 {%endblock%}
