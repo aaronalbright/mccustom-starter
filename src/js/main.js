@@ -3,7 +3,7 @@ import FilterSections from './modules/filterSections';
 
 $(function() {
   $.get(
-    'https://media.miamiherald.com/static/media/projects/2018/tests/file.json',
+    'https://media.miamiherald.com/static/media/projects/2018/florence-lp/sc-data.json',
     stories => {
       let sections = ['all'];
 
