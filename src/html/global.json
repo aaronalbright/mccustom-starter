@@ -1,3 +1,46 @@
 {
-	"user": "Dave"
+  "stories": [
+    {
+      "chapter": "Rae and Cherica",
+      "head": "Who is Rae Carruth and his pregnant girlfriend Cherica Adams?",
+      "img": "https://www.charlotteobserver.com/latest-news/b3bf8q/picture220089785/alternates/LANDSCAPE_640/ch1v2.jpg",
+      "url": "219407970"
+    },
+    {
+      "chapter": "The Hitman Speaks",
+      "head": "Who is the hitman hired to kill Rae Carruth’s girlfriend?",
+      "img": "https://www.charlotteobserver.com/latest-news/rpp18n/picture220089775/alternates/LANDSCAPE_640/ch2v4.jpg",
+      "url": "219417845"
+    },
+    {
+      "chapter": "Life and Death",
+      "head": "Chancellor Lee Adams is born as Carruth investigation starts",
+      "img": "https://www.charlotteobserver.com/latest-news/xchz06/picture220067685/alternates/LANDSCAPE_640/chapter3_16x9.jpg",
+      "url": "219417870"
+    },
+    {
+      "chapter": "The Manhunt",
+      "head": "After Cherica Adams’ death, Panther Rae Carruth vanished. Here’s how FBI caught him.",
+      "img": "https://www.charlotteobserver.com/latest-news/mo3qdy/picture220067995/alternates/LANDSCAPE_640/chapter4_16x9.jpg",
+      "url": "219417890"
+    },
+    {
+      "chapter": "On Trial",
+      "head": "Rae Carruth’s trial unfolds with life-or-death stakes",
+      "img": "https://www.charlotteobserver.com/latest-news/ryda8v/picture220068420/alternates/LANDSCAPE_640/chapter516x9.jpg",
+      "url": "219417925"
+    },
+    {
+      "chapter": "The Verdict and the Miracle",
+      "head": "19 years after ‘inconsistent’ verdict, Rae Carruth is about to be released from prison",
+      "img": "https://www.charlotteobserver.com/latest-news/qbczcm/picture220089835/alternates/LANDSCAPE_640/ch6v3.jpg",
+      "url": "219417965"
+    },
+    {
+      "chapter": "Forgiveness",
+      "head": "Still forgiving: Without Rae Carruth, Saundra Adams wouldn’t have ‘miracle’ grandson",
+      "img": "https://www.charlotteobserver.com/latest-news/cbvk3z/picture220068170/alternates/LANDSCAPE_640/chapter7_16x9.jpg",
+      "url": "219418005"
+    }
+  ]
 }

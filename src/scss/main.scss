@@ -1,5 +1,20 @@
-// Fuse skin local import (may be outdated)
-// @import 'base/fuse';
-
 // Saratoga Fuse skin import. Up to date remote
-@import url('https://media.mcclatchy.com/static/fuse/saratoga.css');
+@import url(https://media.mcclatchy.com/static/fuse/saratoga.css);
+
+@import "base/resets";
+@import "base/fuse-read-more";
+
+body,
+.content-body {
+  background: #f4f4f4;
+}
+
+.content-body {
+    > h1 {
+        color: #222;
+        font-family: "McClatchy Serif", "McClatchy Slab", serif;
+    }
+    p {
+        color: #222
+    }
+}

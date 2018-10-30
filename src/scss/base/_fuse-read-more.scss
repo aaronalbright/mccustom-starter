@@ -1,0 +1,16 @@
+.content-body .fuse-read-more {
+  display: block;
+}
+.content-body .fuse-read-more .card figure {
+  display: block;
+}
+.content-body .fuse-read-more .card .card-info {
+  max-width: 450px;
+  padding: 15px;
+}
+.content-body .fuse-read-more {
+  padding: 0;
+}
+.content-body .fuse-read-more > :not(.card) {
+  padding: 0 15px;
+}
