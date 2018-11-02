@@ -3,14 +3,17 @@ import FilterSections from './modules/filterSections';
 
 $(function() {
   $.get(
-    'https://media.miamiherald.com/static/media/projects/2018/florence-lp/sc-data.json',
+    'https://media.miamiherald.com/static/media/projects/2018/florence-lp/nc-urls.json',
     stories => {
       let sections = ['all'];
 
       // stories.sort((a,b) => new Date(b.date) - new Date(a.date));
 
       for (let each of stories) {
-        if (each.section.toUpperCase() == 'HERO') {
+        if (each == null) {
+          continue;
+        }
+        else if (each.section.toUpperCase() == 'TOP STORY') {
           let imgWrapper = `
             <div class="hero--img-wrapper">
               <img class="hero--img" src="${each.img}" alt="">
@@ -36,7 +39,7 @@ $(function() {
             </div>`;
 
           $('.lp-hero').append(hero);
-        } else if (each.section.toUpperCase() == 'LEAD') {
+        } else if (each.section.toUpperCase() == 'META INFO') {
           let lead = `
           <div class="header__image-wrapper">
           <img src="${each.img}" alt="">
