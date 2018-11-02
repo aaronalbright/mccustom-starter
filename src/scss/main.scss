@@ -1,8 +1,10 @@
 // Saratoga Fuse skin import. Up to date remote
 @import url(https://media.mcclatchy.com/static/fuse/saratoga.css);
 
-@import "base/resets";
-@import "base/fuse-read-more";
+$accent-color: #0b67b2;
+
+@import 'base/resets';
+@import 'base/fuse-read-more';
 
 body,
 .content-body {
@@ -10,11 +12,76 @@ body,
 }
 
 .content-body {
-    > h1 {
-        color: #222;
-        font-family: "McClatchy Serif", "McClatchy Slab", serif;
+  > h1 {
+    color: #222;
+    font-family: 'McClatchy Serif', 'McClatchy Slab', serif;
+  }
+  p {
+    color: #222;
+  }
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .fuse-byline > *:not(:first-child) {
+      margin-top: 10px;
+  }
+  address {
+      margin-bottom: 0 !important;
+  }
+  address > a {
+    color: #222;
+  }
+}
+
+.share-wrapper {
+  margin-bottom: 3em !important;
+  span {
+    color: #989898;
+    display: block;
+    font-size: 17px;
+  }
+  .share-link {
+    font-size: 30px;
+    color: #222;
+    transition: color 0.15s;
+    text-decoration: none;
+    margin-right: 10px;
+    &:focus {
+      text-decoration: none;
+      outline: none;
     }
-    p {
-        color: #222
+    &:hover {
+      color: $accent-color;
     }
+  }
+}
+
+@media (min-width: 600px) {
+  .photo-inline-vertical,
+  .photo-inline-square {
+    float: left;
+    width: 30%;
+    max-width: 400px;
+    margin-left: 5%;
+    margin-right: 25px;
+    &:nth-of-type(2n-1) {
+      float: right;
+      margin-left: 25px;
+      margin-right: 5%;
+    }
+  }
+  .share-wrapper {
+    margin-top: 15px;
+    > span {
+      text-align: center;
+    }
+    .share-link {
+      color: #fff;
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
 }
