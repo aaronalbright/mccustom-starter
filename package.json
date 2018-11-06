@@ -10,7 +10,7 @@
     "sass": "^1.14.3"
   },
   "config": {
-    "url": "[MEDIA SERVER PATH]",
+    "url": "https://media.miamiherald.com/static/media/projects/2018/",
     "docID": "1mYgQtd1s5maTIIhbilawpqAAwWzMtXtJypzKab4V4_w"
   },
   "scripts": {

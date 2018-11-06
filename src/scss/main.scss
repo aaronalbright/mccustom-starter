@@ -43,11 +43,11 @@ body,
 .content-body .photo-inline-horizontal.js-true:first-of-type {
   margin-top: 0;
   // max-width: 100%;
-  .img-container {
+  // .img-container {
     // height: 100%;
-  }
-  img {
-  }
+  // }
+  // img {
+  // }
   .inline-caption {
     border: none;
   }
@@ -62,20 +62,20 @@ body,
       font-size: 10px !important;
     }
   }
-  .head-container {
-    h1 {
-    }
-  }
+  // .head-container {
+  //   h1 {
+  //   }
+  // }
 }
 
-.embed-infographic + p {
+.embed-infographic + p:empty + p {
   font-family: 'McClatchy Sans', Arial, Helvetica, sans-serif;
   color: #222;
   font-size: 1.2em;
   margin: 0 auto;
 }
 
-.embed-infographic + p + p::first-letter {
+.embed-infographic + p:empty + p + p::first-letter {
   font-weight: bold;
   float: left;
   font-size: 4em;
