@@ -1,28 +1,34 @@
 {
-  "stories": [
-    {
-      "chapter": "Rae and Cherica",
-      "head": "Who is Rae Carruth and his pregnant girlfriend Cherica Adams?",
-      "img": "https://www.charlotteobserver.com/latest-news/b3bf8q/picture220089785/alternates/LANDSCAPE_640/ch1v2.jpg",
-      "url": "219407970"
-    },
-    {
-      "chapter": "The Hitman Speaks",
-      "head": "Who is the hitman hired to kill Rae Carruth’s girlfriend?",
-      "img": "https://www.charlotteobserver.com/latest-news/rpp18n/picture220089775/alternates/LANDSCAPE_640/ch2v4.jpg",
-      "url": "219417845"
-    },
-    {
-      "chapter": "Life and Death",
-      "head": "Chancellor Lee Adams is born as Carruth investigation starts",
-      "img": "https://www.charlotteobserver.com/latest-news/xchz06/picture220067685/alternates/LANDSCAPE_640/chapter3_16x9.jpg",
-      "url": "219417870"
-    },
-    {
-      "chapter": "The Manhunt",
-      "head": "After Cherica Adams’ death, Panther Rae Carruth vanished. Here’s how FBI caught him.",
-      "img": "https://www.charlotteobserver.com/latest-news/mo3qdy/picture220067995/alternates/LANDSCAPE_640/chapter4_16x9.jpg",
-      "url": "219417890"
-    }
-  ]
+	"stories": [
+		{
+			"chapter": "Women's silent killer",
+			"head": "Cervical cancer is treatable and preventable. Why are so many women in Haiti dying from it?",
+			"img": "https://picsum.photos/1280/720?image=986",
+			"url": "217050190"
+		},
+		{
+			"chapter": "A broken system",
+			"head": "Haiti’s tale of two cancers and how 700 miles makes a difference in treatment",
+			"img": "https://picsum.photos/1280/720?image=986",
+			"url": "217050580"
+		},
+		{
+			"chapter": "Ending cancer deaths",
+			"head": "How vinegar and smartphones are tackling Haiti’s cervical cancer problem",
+			"img": "https://picsum.photos/1280/720?image=986",
+			"url": "220169740"
+		},
+		{
+			"chapter": "Part Four",
+			"head": "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+			"img": "https://picsum.photos/1280/720?image=986",
+			"url": "000000000"
+		},
+		{
+			"chapter": "Meet the Reporter",
+			"head": "Meet the Reporter",
+			"img": "https://picsum.photos/1280/720?image=986",
+			"url": "000000000"
+		}
+	]
 }

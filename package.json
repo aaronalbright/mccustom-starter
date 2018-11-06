@@ -11,13 +11,13 @@
   },
   "config": {
     "url": "[MEDIA SERVER PATH]",
-    "docID": "[GOOGLE DOC ID GOES HERE]"
+    "docID": "1mYgQtd1s5maTIIhbilawpqAAwWzMtXtJypzKab4V4_w"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000",
     "cue": "parcel build src/html/index.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue",
     "cue-embed": "parcel build src/html/embed.njk --public-url $npm_package_config_url$npm_package_name --out-dir cue-embed",
-    "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/context.json"
+    "text": "googledoc-to-json $npm_package_config_docID -c drive.json -o ./src/html/global.json"
   },
   "devDependencies": {
     "@babel/core": "^7.1.2",

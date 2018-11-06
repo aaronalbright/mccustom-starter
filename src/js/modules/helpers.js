@@ -12,6 +12,8 @@ const q$ = (selector, context = document) => context.querySelectorAll(selector);
 
 /**
  * Creates element with optional class (via className)
+ * @param {string} element Element to createElement
+ * @param {string} class Class name(s) to add to element
  */
 
 const createElement = (el, cl) => {

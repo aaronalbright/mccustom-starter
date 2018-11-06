@@ -1,6 +1,6 @@
 <link rel="stylesheet" href="../scss/main.scss" />
 <script async src="../js/main.js"></script>
-<div class="fuse-read-more" thumbnails>
+<div class="fuse-read-more" data-market="miamiherald">
     <div class="share-wrapper">
         <span>Share</span>
         <a href="https://www.facebook.com/sharer/sharer.php?u=" class="share-link" target="_blank" rel="noopener noreferrer">
@@ -12,14 +12,14 @@
     </div>
     <h5 id="readMore">More from the series</h5>
     {% for story in stories %}
-    <article class="card">
+    <div class="card">
         <figure class="card__image">
             <img src="{{story.img}}" alt="Related story image">
         </figure>
         <div class="card__info">
             <h2><a href="https://www.charlotteobserver.com/sports/article{{story.url}}.html" data-chapter="{{story.chapter}}">{{story.head}}</a></h2>
         </div>
-    </article>
+    </div>
     {%endfor%}
 
 </div>
