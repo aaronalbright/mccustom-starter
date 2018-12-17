@@ -79,7 +79,7 @@ NAV BAR STYLES
   display: flex;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
   transition: transform 200ms ease;
   transform: translateY(-60px);
   &--visible {
@@ -150,6 +150,13 @@ a.fuse-active-item {
     background-color: #fff;
     border-radius: 100%;
     padding: 3px;
+    transform: rotate(90deg);
+    transition: transform 250ms ease;
+  }
+  &--on {
+    > span.glyphicon {
+      transform: rotate(-90deg);
+    }
   }
 }
 
@@ -193,6 +200,29 @@ a.fuse-active-item {
 
 @media (max-width: 767px) {
   .fuse-nav-bar nav {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 55px;
+    right: calc(-51vw - 30px);
+    background-color: #555;
+    z-index: -1;
+    transition: left 250ms ease, right 250ms ease;
+    padding: 0;
+    .fuse-nav-item a {
+      padding: 15px
+    }
+    a.fuse-active-item {
+      border-right: 5px solid $accent-color;
+      border-bottom: none;
+      span {
+        margin: 0;
+      }
+    }
+    &.nav-mob-shown {
+      right: 0;
+      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+    }
+
   }
 }

@@ -50,17 +50,24 @@ export default class FuseNav {
     }
   }
   scrollToEnd() {
-    q$1('.mob-read-more').addEventListener('click', () => {
-      $([document.documentElement, document.body]).animate(
-        { scrollTop: $('.' + this.element.className).offset().top - 70 },
-        500
-      );
+    q$1('.mob-read-more').addEventListener('click', function () {
+      q$1('.fuse-nav-bar nav').classList.toggle('nav-mob-shown')
+      this.classList.toggle('mob-read-more--on');
+      // $([document.documentElement, document.body]).animate(
+      //   { scrollTop: $('.' + this.element.className).offset().top - 70 },
+      //   500
+      // );
     });
+    
   }
   toggleBar() {
     let bar = this.navBar;
+    let mobNav = q$1('.fuse-nav-bar nav')
+    let mobReadMore = q$1('.mob-read-more')
     if (window.scrollY < window.innerHeight / 2) {
       bar.classList.remove('fuse-nav-bar--visible');
+      mobNav.classList.remove('nav-mob-shown');
+      mobReadMore.classList.remove('mob-read-more--on')
     } else if (!bar.classList.contains('fuse-nav-bar--visible')) {
       bar.classList.add('fuse-nav-bar--visible');
     }
