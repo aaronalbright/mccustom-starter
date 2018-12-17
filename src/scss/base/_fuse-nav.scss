@@ -1,7 +1,16 @@
+$accent-color: #0b67b2;
+
 .content-body .fuse-read-more {
   display: block;
+  background-color: #f4f4f4;
+  padding: 15px 0;
   h5 {
     font-size: 1.3em;
+  }
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
   }
 }
 
@@ -18,18 +27,37 @@
   padding: 15px;
   display: flex;
   flex-direction: column;
-  h2 {
+  align-items: flex-start;
+  h3 {
+    font-family: "McClatchy Serif", serif;
+    text-transform: none;
     margin: 0;
+    font-size: 24px;
     &:hover {
       text-decoration: underline;
     }
   }
 }
-.content-body .fuse-read-more {
-  padding: 0;
-}
+
 .content-body .fuse-read-more > :not(.card) {
   padding: 0 15px;
+}
+
+.card__info .info__chapter {
+  font-weight: 400;
+    margin: 0;
+    cursor: default;
+    margin-bottom: 15px;
+    padding: 5px 10px 3px;
+    color: #222;
+    border: solid 1px #989898;
+    border-radius: 2px;
+    background-color: #0000;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 11px;
+    line-height: 1.2em;
+    font-family: "McClatchy Sans",Arial,"Helvetica Neue",Helvetica,sans-serif;
 }
 
 /*************
@@ -68,13 +96,15 @@ NAV BAR STYLES
     color: #fff;
     align-self: stretch;
   }
+  a {
+    color: inherit;
+    cursor: pointer;
+    text-decoration: none;
+  }
 }
 
 .fuse-nav-item {
-  // margin-right: 5px;
-  // &:not(:last-of-type) {
-    // margin-right: 10px;
-  // }
+  font-family: "McClatchy Sans", sans-serif;
   .chpt {
     color: #acacac;
     font-weight: bold;
@@ -113,6 +143,7 @@ a.fuse-active-item {
 
 .mob-read-more {
   color: #fff;
+  font-family: "McClatchy Sans", sans-serif;
   > span.glyphicon {
     margin-left: 5px;
     color: $accent-color;
@@ -127,36 +158,29 @@ a.fuse-active-item {
     font-size: 1.3em;
   }
   .content-body .fuse-read-more .card {
-    margin: 25px auto;
-    background: none;
-    box-shadow: none;
+    margin: 15px;
     align-items: center;
   }
   .content-body .embed-infographic > .fuse-read-more {
-    max-width: 100%;
-    background: #373737;
+    max-width: 900px;
     display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    flex-flow: row wrap;
+    justify-content: flex-start;
     align-items: center;
-    h5 {
+    #readMore {
       text-align: center;
-      color: #989898;
       font-weight: bold;
-      padding: 0;
-    }
-    h2 {
-      color: #fff;
+      padding: 0 15px;
+      flex: 1 100%;
     }
   }
-  .content-body .card {
-    flex-flow: row wrap;
+  .content-body .fuse-read-more .card {
+    flex: 0 1 calc(50% - 30px);
+    flex-flow: column;
     justify-content: center;
-    max-width: 900px;
     figure,
     .card__info {
       max-width: unset !important;
-      flex: 1 1px;
     }
   }
 }

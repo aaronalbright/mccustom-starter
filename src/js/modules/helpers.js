@@ -27,12 +27,11 @@ const createElement = (el, cl) => {
  * @param {string} selector CSS selector string
  */
 const enableShareButtons = selector => {
-    let shareLinks = q$('.'+selector);
+    let shareLinks = document.querySelectorAll('.'+selector);
     for (let i = 0; i < shareLinks.length; i++) {
         shareLinks[i].href =
             shareLinks[i].href + encodeURIComponent(window.location);
     }
-    return;
 }
 
 export { q$, q$1, createElement, enableShareButtons}
