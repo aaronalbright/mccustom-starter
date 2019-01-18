@@ -11,7 +11,7 @@ export default class FuseNav {
 
 
     this.init();
-    this.scrollToEnd();
+    this.toggleNav();
     this.getCurrentURL();
   }
   init() {
@@ -49,14 +49,10 @@ export default class FuseNav {
       }
     }
   }
-  scrollToEnd() {
+  toggleNav() {
     q$1('.mob-read-more').addEventListener('click', function () {
       q$1('.fuse-nav-bar nav').classList.toggle('nav-mob-shown')
       this.classList.toggle('mob-read-more--on');
-      // $([document.documentElement, document.body]).animate(
-      //   { scrollTop: $('.' + this.element.className).offset().top - 70 },
-      //   500
-      // );
     });
     
   }

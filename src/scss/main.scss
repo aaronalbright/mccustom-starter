@@ -7,8 +7,19 @@
   background-color: unset;
 }
 
-.embed-infographic .byline-center {
-  text-align: center;
+.drop-cap {
+  background-color: #222;
+  color: #fff;
+  font-weight: 600;
+  float: left;
+  font-size: 50px;
+  margin: 0 .15em 0 0;
+  padding: 8px 8px 0 8px;
+  line-height: 45px;
+}
+
+.content-body > h3:first-of-type {
+  font-family: "McClatchy Serif", "McClatchy Slab", serif;
 }
 
 /******************

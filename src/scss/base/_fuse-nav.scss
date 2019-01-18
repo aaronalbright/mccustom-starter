@@ -144,18 +144,23 @@ a.fuse-active-item {
 .mob-read-more {
   color: #fff;
   font-family: "McClatchy Sans", sans-serif;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
   > span.glyphicon {
+    font-size: 20px;
     margin-left: 5px;
     color: $accent-color;
     background-color: #fff;
     border-radius: 100%;
     padding: 3px;
-    transform: rotate(90deg);
     transition: transform 250ms ease;
   }
   &--on {
     > span.glyphicon {
-      transform: rotate(-90deg);
+      transform: rotate(180deg);
     }
   }
 }
@@ -204,24 +209,37 @@ a.fuse-active-item {
     flex-direction: column;
     position: absolute;
     top: 55px;
-    right: calc(-51vw - 30px);
-    background-color: #555;
-    z-index: -1;
-    transition: left 250ms ease, right 250ms ease;
-    padding: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-top: 55px;
+    background-color: hsla(0, 0%, 10%, .96);
+    max-height: 0;
+    transition: max-height 1s ease, visibility .1s .6s linear, opacity .1s .6s linear;
+    overflow: hidden;
+    box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.2);
+    opacity: 0;
+    visibility: hidden;
     .fuse-nav-item a {
-      padding: 15px
+      padding: 15px;
+      color: #fff !important;
+    }
+    a:not(.fuse-active-item) {
+      margin-left: 5px;
     }
     a.fuse-active-item {
-      border-right: 5px solid $accent-color;
+      border-left: 5px solid $accent-color;
+      background: hsla(0, 0%, 13%, 0.8);
       border-bottom: none;
       span {
         margin: 0;
       }
     }
     &.nav-mob-shown {
-      right: 0;
-      box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
+      opacity: 1;
+      visibility: visible;
+      max-height: 100vh;
+      transition: max-height 1.5s ease, visibility .1s 130ms linear, opacity .1s 130ms linear;
     }
 
   }
