@@ -11,18 +11,6 @@ const q$1 = (selector, context = document) => context.querySelector(selector);
 const q$ = (selector, context = document) => context.querySelectorAll(selector);
 
 /**
- * Creates element with optional class (via className)
- * @param {string} element Element to createElement
- * @param {string} class Class name(s) to add to element
- */
-
-const createElement = (el, cl) => {
-    let x = document.createElement(el)
-    if (cl != undefined) x.className = cl;
-    return x
-}
-
-/**
  * Elenables share buttons by adding window location to href of each link.
  * @param {string} selector CSS selector string
  */
@@ -34,4 +22,4 @@ const enableShareButtons = selector => {
     }
 }
 
-export { q$, q$1, createElement, enableShareButtons}
+export { q$, q$1, enableShareButtons}
