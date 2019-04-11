@@ -4,8 +4,8 @@ Basic static site builder to be used on McClatchy Sinclair pages.
 Built with [Parcel.js](https://parceljs.org/).
 
 **Includes**
-* `babel-preset-env`
-* `node-sass`
+* `babel 7`
+* `sass`
 * `autoprefixer`
 * `eslint`
 * `nunjucks`
@@ -19,7 +19,7 @@ yarn install
 ```
 
 ## Using nunjucks
-The context file that gets rendered with the template is stored in `./src/html/global.json`.
+The context file that gets rendered with the template is stored in `./src/html/data.json`.
 
 If you've set up [google-doc-to-json](https://www.npmjs.com/package/googledoc-to-json), you can output an AML-formatted Google Doc to `global.json`.
 

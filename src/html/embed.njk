@@ -1,17 +1,3 @@
 <link rel="stylesheet" href="../scss/main.scss" />
-<script async src="../js/main.js"></script>
-<div class="fuse-read-more" data-market="miamiherald">
-    <h5 id="readMore">More from the series</h5>
-    {% for story in stories %}
-    <div class="card">
-        <figure class="card__image">
-            <img src="https://picsum.photos/640/359/??image={{loop.index0}}" alt="Related story image">
-        </figure>
-        <div class="card__info">
-            <div class="info__chapter">{{story.chapter}}</div>
-            <h3><a href="https://www.charlotteobserver.com/sports/article{{story.url}}.html" data-chapter="{{story.chapter}}">{{story.head}}</a></h3>
-        </div>
-    </div>
-    {%endfor%}
-
-</div>
+<script src="../js/main.js"></script>
+{% include 'templates/read-more' %}

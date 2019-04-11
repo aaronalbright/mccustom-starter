@@ -1,28 +1,3 @@
 {
-    "stories": [
-        {
-            "chapter": "Chapter One",
-            "head": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            "img": "https://picsum.photos/640/359/",
-            "url": "000000000"
-        },
-        {
-            "chapter": "Chapter Two",
-            "head": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            "img": "https://picsum.photos/640/359/",
-            "url": "000000000"
-        },
-        {
-            "chapter": "Chapter Three",
-            "head": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            "img": "https://picsum.photos/640/359/",
-            "url": "000000000"
-        },
-        {
-            "chapter": "Chapter Four",
-            "head": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor",
-            "img": "https://picsum.photos/640/359/",
-            "url": "000000000"
-        }
-    ]
+    
 }

@@ -1,4 +1,4 @@
-import { q$, q$1, createElement } from './helpers';
+import { q$, q$1 } from './helpers';
 export default class FuseNav {
   /**
    * Creates Fuse-style navigation
@@ -40,12 +40,15 @@ export default class FuseNav {
     window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
   }
   getCurrentURL() {
-    let sourceURL = q$1('meta[name=original-source]').content;
+    let sourceURL = q$1('meta[name=original-source]').content || undefined;
     let navItems = q$('.fuse-nav-item > a');
     let regex = /\d+(?=\.html)/;
     for (let item of navItems) {
       if (item.href.match(regex)[0] === sourceURL.match(regex)[0]) {
         item.classList.add('fuse-active-item')
+      }
+      else {
+        break;
       }
     }
   }
@@ -84,4 +87,10 @@ function debounce(func, wait, immediate) {
     timeout = setTimeout(later, wait);
     if (callNow) func.apply(context, args);
   };
+}
+
+function createElement(selector, cl) {
+  let el = document.createElement(selector)
+  el.classList.add(cl);
+  return el;
 }
