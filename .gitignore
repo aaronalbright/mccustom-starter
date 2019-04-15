@@ -1,6 +1,14 @@
+# Node and Parcel
 node_modules
 .cache
+
+# Project files
 dist
 build
-drive.json
 src/html/templates
+
+# Auth credentials
+drive.json
+credentials.json
+
+

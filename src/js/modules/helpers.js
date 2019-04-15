@@ -33,6 +33,7 @@ const insertDropCap = selection => {
     1
   )}`;
   firstGraph.innerHTML = dropCap;
+  return firstGraph;
 }
 
 export {q$1, q$, enableShareButtons, insertDropCap}

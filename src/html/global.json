@@ -1,3 +1,43 @@
 {
-    
+  "firstStories": [
+    {
+      "head": "‘The weakest link’: Why your house may burn while your neighbor’s survives the next wildfire",
+      "url": "https://www.sacbee.com/news/state/california/fires/article227665284.html",
+      "img": "https://www.sacbee.com/latest-news/51n71y/picture229020194/alternates/LANDSCAPE_640/SAC_FireRiskParadise_HA_005_190319.JPG",
+      "type": "lead"
+    },
+    {
+      "head": "These California communities could be the next Paradise. Is yours one of them?",
+      "url": "https://www.sacbee.com/news/state/california/fires/article227589484.html",
+      "img": "https://www.sacbee.com/latest-news/cvg5gm/picture229000619/alternates/LANDSCAPE_640/DJI_0001%20copy.jpg",
+      "type": "normal"
+    },
+    {
+      "head": "Our state wants to burn. It’s the California way to forget",
+      "url": "https://www.sacbee.com/news/state/california/fires/article228017534.html",
+      "img": "https://www.sacbee.com/latest-news/xnwkn3/picture228606594/alternates/LANDSCAPE_640/DK_3464.JPG",
+      "type": "normal",
+      "column": "true"
+    },
+    {
+      "head": "Destined to Burn collaboration: Why we did it",
+      "url": "https://www.sacbee.com/news/state/california/fires/article228580459.html",
+      "img": "https://www.sacbee.com/latest-news/2dme0v/picture228982589/alternates/LANDSCAPE_640/WhyWeDidIt.JPG",
+      "type": "normal",
+      "editor": "true"
+    },
+    {
+      "head": "California faces multiple roadblocks in preventing devastating wildfires",
+      "url": "https://www.sacbee.com/news/state/california/fires/article228847924.html",
+      "img": "https://www.sacbee.com/latest-news/7kcup3/picture228983694/alternates/FREE_768/TreatingLandscape_backburn_HA.JPG",
+      "type": "chico"
+    },
+    {
+      "head": "What’s the wildfire risk in your community? Check here",
+      "url": "https://www.sacbee.com/news/state/california/fires/article229057194.html",
+      "img": "https://www.sacbee.com/latest-news/6iw06y/picture229077204/alternates/FREE_768/IMG_1ALede_JV_073018_LAK_4_1_7UE6QF5L_L407916021.JPG",
+      "type": "normal"
+    }
+  ],
+  "secondStories": []
 }
