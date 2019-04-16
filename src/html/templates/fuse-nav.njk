@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="../../scss/fuse-nav.scss" />
+<div class="fuse-read-more">
+    <h5>More from the series</h5>
+    {% for story in stories %}
+    <div class="card">
+        <figure class="card__image">
+            <img src="https://picsum.photos/640/359/??image={{loop.index0}}" alt="Related story image">
+        </figure>
+        <div class="card__head">
+            <h4><a href="{{story.url}}">{{story.head}}</a></h4>
+        </div>
+    </div>
+    {%endfor%}
+</div>

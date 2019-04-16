@@ -11,14 +11,11 @@ async function getCredentials() {
         credentials = await fs.readJson(credentialFile)
     } catch (e) {
         console.log(e);
-    } 
-
-    let client_email = credentials.client_email;
-    let private_key = credentials.private_key;
-
+    }
+    
     return {
-      client_email,
-      private_key
+      client_email: credentials.client_email,
+      private_key: credentials.private_key
     };
 }
 

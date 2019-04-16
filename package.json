@@ -1,23 +1,27 @@
 {
   "name": "custom-cue-start",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.5.1",
     "eslint": "^5.16.0",
     "gootenberg": "^1.0.0",
+    "node-ssh": "^6.0.0",
     "nunjucks": "^3.2.0",
     "parcel-bundler": "^1.12.3",
     "sass": "^1.18.0"
   },
   "config": {
-    "url": "https://media.miamiherald.com/static/media/projects/2019/",
-    "docID": "1uTIxCnEXTaHwtxEVn8guvmTZq26A20xU0QqpwUlbwm4"
+    "remote": "https://media.miamiherald.com/static/media/projects/2019/",
+    "docID": "1uTIxCnEXTaHwtxEVn8guvmTZq26A20xU0QqpwUlbwm4",
+    "sheetID": "1TgnpAqfzUDbe5Tra40CmGL9uZwdD2CWVeiw52SOHt2s"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000",
-    "build": "rm -rf build && parcel build src/html/embed.njk --public-url $npm_package_config_url$npm_package_name --out-dir build",
-    "fetch:doc": "node ./utils/fetch-doc.js $npm_package_config_docID"
+    "build": "rm -rf build && parcel build src/html/embed.njk --public-url $npm_package_config_remote$npm_package_name --out-dir build",
+    "get:doc": "node ./utils/get-data.js $npm_package_config_docID doc",
+    "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
+    "push:sheet": "node ./utils/update-sheet.js $npm_package_config_sheetID"
   },
   "devDependencies": {
     "@babel/core": "^7.4.3",

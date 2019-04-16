@@ -3,12 +3,13 @@ node_modules
 .cache
 
 # Project files
+.vscode
 dist
 build
-src/html/templates
+src/html/templates/base.njk
 
 # Auth credentials
 drive.json
-credentials.json
+.env
 
 
