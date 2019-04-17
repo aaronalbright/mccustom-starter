@@ -1,4 +1,4 @@
-copy-embed:
+embed:
 	cat build/embed.html | pbcopy
 
 deploy:
