@@ -4,6 +4,7 @@ node_modules
 
 # Project files
 .vscode
+.tmp
 dist
 build
 src/html/templates/base.njk

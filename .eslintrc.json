@@ -12,7 +12,7 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "source Type": "module"
+        "sourceType": "module"
     },
     "rules": {
         "no-console": 0,
