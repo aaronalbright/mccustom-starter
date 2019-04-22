@@ -6,11 +6,10 @@ const fs = require('fs-extra');
 const node_ssh = require('node-ssh');
 const Gootenberg = require('gootenberg');
 
-const pkg = require(`../package.json`);
 const { getCredentials } = require('./get-credentials');
 
 const localPath = path.join(process.cwd(), '.tmp/data.json');
-const remotePath = path.join(process.env.PATH, pkg.name, '/data.json');
+const remotePath = path.join(process.env.PATH, process.env.npm_package_name, '/data.json');
 
 let id = process.argv[2];
 
