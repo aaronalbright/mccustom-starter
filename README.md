@@ -18,7 +18,7 @@ git clone https://github.com/aaronalbright/mccustom-starter
 yarn install
 ```
 
-## Using nunjucks
+### Using nunjucks
 The context file that gets rendered with the template is stored in `./src/html/global.json`.
 
 ### To start a server at `localhost:3000`
