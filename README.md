@@ -19,37 +19,43 @@ yarn install
 ```
 
 ## Using nunjucks
-The context file that gets rendered with the template is stored in `./src/html/data.json`.
+The context file that gets rendered with the template is stored in `./src/html/global.json`.
 
-If you've set up [google-doc-to-json](https://www.npmjs.com/package/googledoc-to-json), you can output an AML-formatted Google Doc to `global.json`.
-
-## To start a server at `localhost:3000`
+### To start a server at `localhost:3000`
 ```
 yarn start
 ```
 
-## Build a static site
+### Build a static site
 ```
 yarn build
 ```
 Builds files into `./build/public`
 
-## Build a static site with relative links for CUE
-```
-yarn cue
-```
-Builds files into `./cue`
+## Fetching external data
 
-**`config.url` must be set in `package.json`**
+To fetch external data, first fill in one or both of the `docID` of `sheetID` with the desired Google Drive file after sharing it with the Goolge Services email.
 
-## Fetch Google Doc in AML format
-_Requires `drive.json` setup_
-```
-yarn text
-```
-Outputs into `./src/html/global.json`
+File is saved to `./src/html/global.json`.
 
-**`config.docID` must be set in `package.json`**
+### Get AML-formatted Google Doc
+```
+yarn get:doc
+```
+
+### Get Google Sheet
+```
+yarn get:sheet
+```
+
+### Fetch a Google Sheet and update an extneral file via SSH
+```
+yarn push:sheet
+```
+
+
+
+
 
 
 
