@@ -1,6 +1,6 @@
-$accent-color: #0b67b2;
+$accent-color: #31409f;
 
-.content-body .fuse-read-more {
+.fuse-read-more {
   display: block;
   background-color: #f4f4f4;
   padding: 15px 0;
@@ -14,15 +14,15 @@ $accent-color: #0b67b2;
   }
 }
 
-.content-body .fuse-read-more .card {
+.fuse-read-more .card {
   margin-bottom: 30px;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
 }
 
-.content-body .fuse-read-more .card figure {
+.fuse-read-more .card figure {
   display: block;
 }
-.content-body .fuse-read-more .card .card__info {
+.fuse-read-more .card .card__info {
   max-width: 450px;
   padding: 15px;
   display: flex;
@@ -39,7 +39,7 @@ $accent-color: #0b67b2;
   }
 }
 
-.content-body .fuse-read-more > :not(.card) {
+.fuse-read-more > :not(.card) {
   padding: 0 15px;
 }
 
@@ -90,6 +90,7 @@ NAV BAR STYLES
   .fuse-nav-logo {
     width: 150px;
     filter: invert(1) brightness(3) saturate(0);
+    margin: 0;
   }
   nav {
     display: flex;
@@ -105,20 +106,22 @@ NAV BAR STYLES
 
 .fuse-nav-item {
   font-family: "McClatchy Sans", sans-serif;
-  .chpt {
+  .nav-chapter {
     color: #acacac;
     font-weight: bold;
     font-size: 12px;
   }
-  a {
+  .nav-link, a {
     height: 100%;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-flow: column wrap;
+    justify-content: center;
     padding: 0 10px;
     color: #cacaca !important;
     transition: 200ms ease;
     border-bottom: 0px solid rgba(0, 0, 0, 0);
-    span:not(.chpt) {
+    span:first-child {
       transition: margin 200ms ease;
     }
   }
@@ -127,7 +130,7 @@ NAV BAR STYLES
     border-bottom: 5px solid $accent-color;
     color: #fff !important;
   }
-  a:hover span:not(.chpt) {
+  a:hover .nav-chapter {
     margin-top: 5px;
   }
 }
@@ -136,7 +139,7 @@ a.fuse-active-item {
   background: #222;
   color: #fff !important;
   border-bottom: 5px solid $accent-color;
-  span {
+  span:first-child {
     margin-top: 5px;
   }
 }
@@ -149,6 +152,7 @@ a.fuse-active-item {
   align-items: center;
   justify-content: center;
   vertical-align: middle;
+  line-height: 1;
   > span.glyphicon {
     font-size: 20px;
     margin-left: 5px;
@@ -169,11 +173,11 @@ a.fuse-active-item {
   .fuse-read-more h5 {
     font-size: 1.3em;
   }
-  .content-body .fuse-read-more .card {
+  .fuse-read-more .card {
     margin: 15px;
     align-items: center;
   }
-  .content-body .embed-infographic > .fuse-read-more {
+  .embed-infographic > .fuse-read-more {
     max-width: 900px;
     display: flex;
     flex-flow: row wrap;
@@ -186,7 +190,7 @@ a.fuse-active-item {
       flex: 1 100%;
     }
   }
-  .content-body .fuse-read-more .card {
+  .fuse-read-more .card {
     flex: 0 1 calc(50% - 30px);
     flex-flow: column;
     justify-content: center;
@@ -215,12 +219,12 @@ a.fuse-active-item {
     padding-top: 55px;
     background-color: hsla(0, 0%, 10%, .96);
     max-height: 0;
-    transition: max-height 1s ease, visibility .1s .6s linear, opacity .1s .6s linear;
+    transition: max-height .5s ease, visibility .2s .25s linear, opacity .2s .25s linear;
     overflow: hidden;
     box-shadow: inset 0px 2px 2px 0px rgba(0,0,0,0.2);
     opacity: 0;
     visibility: hidden;
-    .fuse-nav-item a {
+    .fuse-nav-item a, .fuse-nav-item .nav-link {
       padding: 15px;
       color: #fff !important;
     }
@@ -229,8 +233,16 @@ a.fuse-active-item {
     }
     a.fuse-active-item {
       border-left: 5px solid $accent-color;
-      background: hsla(0, 0%, 13%, 0.8);
+      background: hsla(0, 0%, 22%, 0.5);
       border-bottom: none;
+      span {
+        margin: 0;
+      }
+    }
+    .fuse-nav-item a:hover  {
+      border-bottom: none;
+      border-left: 5px solid $accent-color;
+      margin-left: 0;
       span {
         margin: 0;
       }
@@ -239,7 +251,7 @@ a.fuse-active-item {
       opacity: 1;
       visibility: visible;
       max-height: 100vh;
-      transition: max-height 1.5s ease, visibility .1s 130ms linear, opacity .1s 130ms linear;
+      transition: max-height 1s ease, visibility .1s 130ms linear, opacity .1s 130ms linear;
     }
 
   }

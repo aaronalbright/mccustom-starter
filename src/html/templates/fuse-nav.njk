@@ -1,13 +1,16 @@
-<link rel="stylesheet" href="../../src/scss/fuse-nav.scss" />
-<div class="fuse-read-more">
+<div class="fuse-read-more" data-market="miamiherald">
     <h5>More from the series</h5>
     {% for story in stories %}
     <div class="card">
         <figure class="card__image">
             <img src="https://picsum.photos/640/359/??image={{loop.index0}}" alt="Related story image">
         </figure>
-        <div class="card__head">
-            <h4><a href="{{story.url}}">{{story.head}}</a></h4>
+        <div class="card__head card__info">
+            {% if story.url != "TBA" %}
+            <h4><a class="nav-link" href="{{story.url}}" data-title="{{story.title}}">{{story.headline}}</a></h4>
+            {% else %}
+            <h4><div class="nav-link" data-title="{{story.title}}">{{story.headline}}</div></h4>
+            {% endif %}
         </div>
     </div>
     {%endfor%}
