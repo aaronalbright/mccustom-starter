@@ -1,0 +1,27 @@
+.story-template > .story-rail {
+  display: none;
+}
+
+#zerg-target,
+.story-gallery.spillover-gallery.image-gallery-organism {
+  display: none;
+}
+
+#story-cta-widget {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  // fix for lead asset on mobile
+  .immersive .media {
+    background-attachment: unset;
+  }
+}
+
+// fixes overflow x scroll on mobile
+@media (max-width: 600px) {
+  .content-footer .connect-pub > div > .row.more-link {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}

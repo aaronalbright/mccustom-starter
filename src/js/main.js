@@ -1,4 +1,5 @@
 import { enableShareButtons, insertDropCap } from './modules/helpers';
+import FuseNav from './modules/fuse-nav';
 
 document.addEventListener('DOMContentLoaded', function() {
 

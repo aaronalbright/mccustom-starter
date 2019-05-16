@@ -9,8 +9,6 @@ export default class FuseNav {
     this.element = element;
     this.market = this.element.getAttribute('data-market');
 
-
-    this.init();
     this.toggleNav();
     this.getCurrentURL();
   }
@@ -74,11 +72,11 @@ export default class FuseNav {
 }
 
 function debounce(func, wait, immediate) {
-  var timeout;
+  let timeout;
   return function() {
-    var context = this,
-      args = arguments;
-    var later = function() {
+    let context = this;
+    let args = arguments;
+    const later = function() {
       timeout = null;
       if (!immediate) func.apply(context, args);
     };
