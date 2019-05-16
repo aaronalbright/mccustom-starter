@@ -9,13 +9,7 @@ export default class FuseNav {
     this.element = element;
     this.market = this.element.getAttribute('data-market');
     this.series = seriesSequence;
-
-    this.init();
-    this.toggleNav();
-    // this.getCurrentURL();
-
-    // Removes story cards if true
-    if (removeCards) this.element.remove();
+    this.removeCards = removeCards;
   }
   init() {
     let navBar = this.navBar;
@@ -34,16 +28,18 @@ export default class FuseNav {
 
       let clone = info.cloneNode(true);
       let navItem = createElement('div', 'fuse-nav-item');
-      
+
       if (clone.localName == 'div') {
-        clone.classList.add('no-link')
+        clone.classList.add('no-link');
       }
 
       if (this.series) {
-        clone.innerHTML = `<span class="nav-chapter">Part ${i + 1}</span><span class="nav-title">${clone.dataset.title}</span>`;
-      }
-      else {
-        clone.innerHTML = `<span class="nav-title">${clone.dataset.title}</span>`;
+        clone.innerHTML = `<span class="nav-chapter">Part ${i +
+          1}</span><span class="nav-title">${clone.dataset.title}</span>`;
+      } else {
+        clone.innerHTML = `<span class="nav-title">${
+          clone.dataset.title
+        }</span>`;
       }
 
       navItem.appendChild(clone);
@@ -53,6 +49,10 @@ export default class FuseNav {
     this.element.parentNode.insertBefore(navBar, this.element.nextSibling);
 
     window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
+
+    this.toggleNav();
+    // Removes story cards if true
+    if (this.removeCards) this.element.remove();
   }
   getCurrentURL() {
     let sourceURL = q$1('meta[name=original-source]').content || undefined;
