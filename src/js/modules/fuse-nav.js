@@ -14,15 +14,24 @@ export default class FuseNav {
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <img src="https://www.miamiherald.com/wps/build/images/${
-       this.market
-     }/logo.svg" alt="Miami Herald Logo" class="fuse-nav-logo">
+     <img src="https://media.miamiherald.com/static/media/projects/2019/priced-out-of-paradise/logo.png" alt="Miami Herald Logo" class="fuse-nav-logo">
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;
 
     const articles = this.element.querySelectorAll('.card');
     const nav = navBar.querySelector('nav');
+
+    const isLive = (clone, index) => {
+      if (clone.dataset.head == "Coming Soon") {
+        return 'Coming Soon'
+      } else if (clone.localName == 'div') {
+        return clone.dataset.head
+      } else {
+        return `Part ${index + 1}`
+      }
+    }
+
     for (let i = 0; i < articles.length; i++) {
       let info = articles[i].querySelector('.card__info .nav-link');
 
@@ -33,10 +42,14 @@ export default class FuseNav {
         clone.classList.add('no-link');
       }
 
-      if (this.series) {
-        clone.innerHTML = `<span class="nav-chapter">Part ${i +
-          1}</span><span class="nav-title">${clone.dataset.title}</span>`;
-      } else {
+      if (this.series && clone.dataset.title !== "Explore") {
+        clone.innerHTML = `<span class="nav-chapter">${isLive(clone, i)}</span><span class="nav-title">${clone.dataset.title}</span>`;
+      } else if (this.series) {
+        clone.innerHTML = `<span class="nav-chapter">&nbsp;</span><span class="nav-title">${
+          clone.dataset.title
+        }</span>`;
+      }
+       else {
         clone.innerHTML = `<span class="nav-title">${
           clone.dataset.title
         }</span>`;

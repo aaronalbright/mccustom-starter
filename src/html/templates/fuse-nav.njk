@@ -7,9 +7,9 @@
         </figure>
         <div class="card__head card__info">
             {% if story.url != "TBA" %}
-            <h4><a class="nav-link" href="{{story.url}}" data-title="{{story.title}}">{{story.headline}}</a></h4>
+            <h4><a class="nav-link" href="{{story.url}}" data-title="{{story.title}}" data-head="{{story.headline}}">{{story.headline}}</a></h4>
             {% else %}
-            <h4><div class="nav-link" data-title="{{story.title}}">{{story.headline}}</div></h4>
+            <h4><div class="nav-link" data-title="{{story.title}}" data-head="{{story.headline}}">{{story.headline}}</div></h4>
             {% endif %}
         </div>
     </div>

@@ -3,22 +3,17 @@
     {
       "url": "#",
       "headline": "Part 1 Story 1",
-      "title": "Lorem ipsum deluium"
+      "title": "City in Transition"
     },
     {
       "url": "TBA",
-      "headline": "Part 2 Story 1",
-      "title": "Coming June XX"
+      "headline": "Coming June 11",
+      "title": "Workforce housing"
     },
     {
-      "url": "TBA",
-      "headline": "Part 3 Story 1",
-      "title": "Coming June XX"
-    },
-    {
-      "url": "TBA",
-      "headline": "Part 4 Story 1",
-      "title": "Coming July XX"
+      "url": "#",
+      "headline": "Headline",
+      "title": "Explore"
     }
   ]
 }

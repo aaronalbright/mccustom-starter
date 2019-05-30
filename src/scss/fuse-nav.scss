@@ -88,9 +88,12 @@ NAV BAR STYLES
   svg,
   .svg,
   .fuse-nav-logo {
-    width: 150px;
-    filter: invert(1) brightness(3) saturate(0);
+    // width: 150px;
+    height: 35px;
     margin: 0;
+    &.market {
+      filter: invert(1) brightness(3) saturate(0);
+    }
   }
   nav {
     display: flex;
@@ -118,11 +121,14 @@ NAV BAR STYLES
     flex-flow: column wrap;
     justify-content: center;
     padding: 0 10px;
-    color: #cacaca !important;
+    color: #fff;
     transition: 200ms ease;
     border-bottom: 0px solid rgba(0, 0, 0, 0);
     span:first-child {
       transition: margin 200ms ease;
+    }
+    &.no-link {
+      opacity: 0.5;
     }
   }
   a:hover {
@@ -208,6 +214,10 @@ a.fuse-active-item {
 }
 
 @media (max-width: 767px) {
+  .fuse-nav-bar .fuse-nav-logo {
+    height: auto;
+    width: 220px;
+  }
   .fuse-nav-bar nav {
     display: flex;
     flex-direction: column;
