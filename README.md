@@ -30,7 +30,7 @@ yarn start
 ```
 yarn build
 ```
-Builds files into `./build/public`
+Builds files into `./build/`
 
 ## Fetching external data
 
@@ -53,7 +53,12 @@ yarn get:sheet
 yarn push:sheet
 ```
 
+---
 
+## To do
+
+* Better handling of multiple data sources
+* Option for not storing data as a nunjucks context
 
 
 
