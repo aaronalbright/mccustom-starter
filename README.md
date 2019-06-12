@@ -18,7 +18,11 @@ git clone https://github.com/aaronalbright/mccustom-starter
 yarn
 ```
 
-If you want a fresh git directory
+If you want a fresh git repo
+```
+rm -rf git
+git init
+```
 
 ### Using nunjucks
 The context file that gets rendered with the template is stored in `src/html/global.json`.
