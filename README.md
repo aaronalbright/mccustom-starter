@@ -21,7 +21,7 @@ yarn
 If you want a fresh git directory
 
 ### Using nunjucks
-The context file that gets rendered with the template is stored in `./src/html/global.json`.
+The context file that gets rendered with the template is stored in `src/html/global.json`.
 
 ### To start a server at `localhost:3000`
 ```
@@ -32,20 +32,20 @@ yarn start
 ```
 yarn build
 ```
-Builds files into `./build/`
+Builds files into `build/`
 
 ## Fetching external data
 
 1. Create a Google Doc or Sheet. 
 2. Share it with McClatchy's Google service account.
 3. Place the Google auth tokens file in your local home directory.
-4. Copy the doc ID (between `d/` and `/edit` from the URL and place it in either `config.docID` or `config.sheetID` in `package.json`
+4. Copy the doc ID (between `d/` and `/edit` from the URL) and place it in either `config.docID` or `config.sheetID` in `package.json`
 
 ![docID](docs/img/google-id.png)
 
 Currently, you can only work with one or the other, unless you change the output in `/utils/get-data.js`.
 
-This feature is exclusively designed for use as the nunjucks templating cotent.
+This feature is exclusively designed for use as the nunjucks templating context (i.e. `global.json`).
 
 Eventually, everything will be put in a `./data` folder.
 
@@ -59,7 +59,7 @@ yarn get:doc
 yarn get:sheet
 ```
 
-Files are saved to `./src/html/global.json`.
+Files are saved to `src/html/global.json`.
 
 ### Fetch a Google Sheet and update an extneral file via SSH
 ```
