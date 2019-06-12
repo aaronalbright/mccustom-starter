@@ -15,8 +15,10 @@ Built with [Parcel.js](https://parceljs.org/).
 
 ```
 git clone https://github.com/aaronalbright/mccustom-starter
-yarn install
+yarn
 ```
+
+If you want a fresh git directory
 
 ### Using nunjucks
 The context file that gets rendered with the template is stored in `./src/html/global.json`.
@@ -34,11 +36,20 @@ Builds files into `./build/`
 
 ## Fetching external data
 
-To fetch external data, first fill in one or both of the `docID` of `sheetID` with the desired Google Drive file after sharing it with the Goolge Services email.
+1. Create a Google Doc or Sheet. 
+2. Share it with McClatchy's Google service account.
+3. Place the Google auth tokens file in your local home directory.
+4. Copy the doc ID (between `d/` and `/edit` from the URL and place it in either `config.docID` or `config.sheetID` in `package.json`
 
-File is saved to `./src/html/global.json`.
+![docID](docs/img/google-id.png)
 
-### Get AML-formatted Google Doc
+Currently, you can only work with one or the other, unless you change the output in `/utils/get-data.js`.
+
+This feature is exclusively designed for use as the nunjucks templating cotent.
+
+Eventually, everything will be put in a `./data` folder.
+
+### Get [AML-formatted](http://archieml.org/) Google Doc
 ```
 yarn get:doc
 ```
@@ -47,6 +58,8 @@ yarn get:doc
 ```
 yarn get:sheet
 ```
+
+Files are saved to `./src/html/global.json`.
 
 ### Fetch a Google Sheet and update an extneral file via SSH
 ```
