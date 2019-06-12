@@ -55,9 +55,7 @@ async function getSheet(id) {
 
   let data = await goot.parse.table(id);
 
-  await fs.outputJSON(localPath, data, {
-    spaces: 2
-  });
+  await fs.outputJSON(localPath, data);
 }
 
 uploadSheet().catch(console.error);
