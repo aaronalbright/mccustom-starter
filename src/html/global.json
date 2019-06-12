@@ -1,8 +1,8 @@
 {
   "stories": [
     {
-      "url": "#",
-      "headline": "Part 1 Story 1",
+      "url": "https://www.miamiherald.com/news/local/community/miami-dade/article229029784.html",
+      "headline": "Miami was in the dumps. Now it’s a global boomtown, and the locals can’t afford to live here.",
       "title": "City in Transition"
     },
     {
@@ -11,8 +11,8 @@
       "title": "Workforce housing"
     },
     {
-      "url": "#",
-      "headline": "Headline",
+      "url": "https://www.miamiherald.com/news/local/community/miami-dade/article229998699.html",
+      "headline": "Where can you afford to rent or buy in South Florida? This tool will show you",
       "title": "Explore"
     }
   ]

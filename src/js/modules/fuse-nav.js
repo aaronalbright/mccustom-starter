@@ -1,4 +1,5 @@
 import { q$, q$1 } from './helpers';
+import logo from '../../assets/logo.svg';
 export default class FuseNav {
   /**
    * Creates sticky navigation
@@ -14,7 +15,7 @@ export default class FuseNav {
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <img src="https://media.miamiherald.com/static/media/projects/2019/priced-out-of-paradise/logo.png" alt="Miami Herald Logo" class="fuse-nav-logo">
+     <img src="${logo}" alt="Miami Herald Logo" class="fuse-nav-logo">
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;
