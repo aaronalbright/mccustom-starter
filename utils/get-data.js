@@ -4,7 +4,7 @@ const { getCredentials } = require('./get-credentials');
 
 const file = './src/html/global.json';
 
-async function getDoc() {
+async function getData() {
   const goot = new Gootenberg();
   const c = await getCredentials();
 
@@ -27,4 +27,4 @@ async function getDoc() {
   console.log(`Downloaded ${type}: ${id}`);
 }
 
-getDoc().catch(console.error);
+getData().catch(console.error);
