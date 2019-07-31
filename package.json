@@ -14,7 +14,7 @@
   "config": {
     "remote": "https://media.miamiherald.com/static/media/projects/2019/",
     "docID": "",
-    "sheetID": "10BcS0nXfY8y2qUeHZf1-_V41_lFeTRBGFlh5I2zcQ5A"
+    "sheetID": "1mYPbC405wOYtIFvIhx1dkEyhchfl1KKAh1wv-mFtzYE"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000",

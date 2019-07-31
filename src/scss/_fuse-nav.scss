@@ -1,63 +1,18 @@
-$accent-color: #31409f;
-
 .fuse-read-more {
-  display: block;
-  background-color: #f4f4f4;
-  padding: 15px 0;
-  h5 {
-    font-size: 1.3em;
-  }
-  a {
-    color: inherit;
-    cursor: pointer;
-    text-decoration: none;
-  }
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .fuse-read-more .card {
-  margin-bottom: 30px;
+  --lc: #222;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
 }
 
-.fuse-read-more .card figure {
-  display: block;
-}
-.fuse-read-more .card .card__info {
-  max-width: 450px;
-  padding: 15px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  h3 {
-    font-family: 'McClatchy Serif', serif;
-    text-transform: none;
-    margin: 0;
-    font-size: 24px;
-    &:hover {
-      text-decoration: underline;
-    }
+.fuse-read-more .card {
+  img {
+    padding: 0;
   }
-}
-
-.fuse-read-more > :not(.card) {
-  padding: 0 15px;
-}
-
-.card__info .info__chapter {
-  font-weight: 400;
-  margin: 0;
-  cursor: default;
-  margin-bottom: 15px;
-  padding: 5px 10px 3px;
-  color: #222;
-  border: solid 1px #989898;
-  border-radius: 2px;
-  background-color: #0000;
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 11px;
-  line-height: 1.2em;
-  font-family: 'McClatchy Sans', Arial, 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 /*************
@@ -70,7 +25,7 @@ NAV BAR STYLES
   left: 0;
   width: 100vw;
   max-width: unset !important;
-  height: 55px;
+  height: 50px;
   background-color: #373737;
   padding: 0 15px;
   margin: 0 !important;
@@ -88,8 +43,6 @@ NAV BAR STYLES
   svg,
   .svg,
   .fuse-nav-logo {
-    // width: 150px;
-    height: 35px;
     margin: 0;
     &.market {
       filter: invert(1) brightness(3) saturate(0);
@@ -134,18 +87,18 @@ NAV BAR STYLES
   }
   a:hover {
     background: rgba(34, 34, 34, 0.5);
-    border-bottom: 5px solid $accent-color;
+    border-bottom: 5px solid var(--lc);
     color: #fff !important;
   }
-  a:hover .nav-chapter {
+  a:hover span:first-child {
     margin-top: 5px;
   }
 }
 
-a.fuse-active-item {
+.fuse-nav-item .fuse-active-item {
   background: #222;
   color: #fff !important;
-  border-bottom: 5px solid $accent-color;
+  border-bottom: 5px solid var(--lc);
   span:first-child {
     margin-top: 5px;
   }
@@ -163,7 +116,7 @@ a.fuse-active-item {
   > span.glyphicon {
     font-size: 20px;
     margin-left: 5px;
-    color: $accent-color;
+    color: var(--lc);
     background-color: #fff;
     border-radius: 100%;
     padding: 3px;
@@ -172,38 +125,6 @@ a.fuse-active-item {
   &--on {
     > span.glyphicon {
       transform: rotate(180deg);
-    }
-  }
-}
-
-@media (min-width: 600px) {
-  .fuse-read-more h5 {
-    font-size: 1.3em;
-  }
-  .fuse-read-more .card {
-    margin: 15px;
-    align-items: center;
-  }
-  .embed-infographic > .fuse-read-more {
-    max-width: 900px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: center;
-    #readMore {
-      text-align: center;
-      font-weight: bold;
-      padding: 0 15px;
-      flex: 1 100%;
-    }
-  }
-  .fuse-read-more .card {
-    flex: 0 1 calc(50% - 30px);
-    flex-flow: column;
-    justify-content: center;
-    figure,
-    .card__info {
-      max-width: unset !important;
     }
   }
 }
@@ -223,14 +144,14 @@ a.fuse-active-item {
     display: flex;
     flex-direction: column;
     position: absolute;
-    top: 55px;
+    top: 50px;
     left: 0;
     right: 0;
     top: 0;
-    padding-top: 55px;
-    background-color: hsla(0, 0%, 10%, 0.96);
+    padding-top: 50px;
+    background-color: hsla(0, 0%, 10%, 0.97);
     max-height: 0;
-    transition: max-height 0.5s ease, visibility 0.2s 0.25s linear,
+    transition: max-height 375ms ease, visibility 0.2s 0.25s linear,
       opacity 0.2s 0.25s linear;
     overflow: hidden;
     box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
@@ -244,9 +165,9 @@ a.fuse-active-item {
     a:not(.fuse-active-item) {
       margin-left: 5px;
     }
-    a.fuse-active-item {
-      border-left: 5px solid $accent-color;
-      background: hsla(0, 0%, 22%, 0.5);
+    .fuse-active-item {
+      border-left: 5px solid var(--lc);
+      background: none;
       border-bottom: none;
       span {
         margin: 0;
@@ -254,7 +175,7 @@ a.fuse-active-item {
     }
     .fuse-nav-item a:hover {
       border-bottom: none;
-      border-left: 5px solid $accent-color;
+      border-left: 5px solid var(--lc);
       margin-left: 0;
       span {
         margin: 0;

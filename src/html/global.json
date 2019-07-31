@@ -1,19 +1,36 @@
 {
   "stories": [
     {
-      "url": "https://www.miamiherald.com/news/local/community/miami-dade/article229029784.html",
-      "headline": "Miami was in the dumps. Now it’s a global boomtown, and the locals can’t afford to live here.",
-      "title": "City in Transition"
+      "SLUG": "FLORENCE-LESSONS",
+      "CUE": "https://cue.misitemgr.com/#/main?name=0717-FLORENCE-LESSONS&uri=https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fcontent%2F231970292&mimetype=x-ece%2Fstory",
+      "URL": "231970292",
+      "HEADLINE": "Lorem ipsum",
+      "TITLE": "Lessons",
+      "PUBDATE": "August 6, 2019"
     },
     {
-      "url": "TBA",
-      "headline": "Coming June 11",
-      "title": "Workforce housing"
+      "SLUG": "FLORENCEDEATHS-LEADIN",
+      "CUE": "https://cue.misitemgr.com/#/main?name=0717-FLORENCEDEATHS-LEADIN&uri=https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fcontent%2F231567003&mimetype=x-ece%2Fstory",
+      "URL": "231567003",
+      "HEADLINE": "Lorem ipsum",
+      "TITLE": "Life Lost",
+      "PUBDATE": "August 6, 2019"
     },
     {
-      "url": "https://www.miamiherald.com/news/local/community/miami-dade/article229998699.html",
-      "headline": "Where can you afford to rent or buy in South Florida? This tool will show you",
-      "title": "Explore"
+      "SLUG": "FLORENCETALLY",
+      "CUE": "https://cue.misitemgr.com/#/main?name=0717-FLORENCETALLY&uri=https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fcontent%2F232814312&mimetype=x-ece%2Fstory&extra=%7B%22modelURI%22:%7B%22string%22:%22https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fpublication%2Fnewsobserver%2Fmodel%2Fcontent-type%2Fstory%22,%22$class%22:%22URI%22%7D,%22homePublication%22:%7B%22name%22:%22newsobserver%22,%22uri%22:%7B%22string%22:%22https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fpublication%2Fnewsobserver%2F%22,%22$class%22:%22URI%22%7D,%22mimetype%22:%7B%22string%22:%22application%2Fatom%2Bxml;%20type%3Dentry%22,%22$class%22:%22cue.core.MIMEType%22%7D,%22$class%22:%22cue.core.Link%22%7D%7D",
+      "URL": "232814312",
+      "HEADLINE": "Lorem ipsum",
+      "TITLE": "Causes and Conditions",
+      "PUBDATE": "August 6, 2019"
+    },
+    {
+      "SLUG": "FLORENCEDEATHS",
+      "CUE": "https://cue.misitemgr.com/#/main?name=0717-FLORENCEDEATHS&uri=https:%2F%2Fcue-webservice.misitemgr.com%2Fwebservice%2Fescenic%2Fcontent%2F231566713&mimetype=x-ece%2Fstory",
+      "URL": "232814312",
+      "HEADLINE": "Lorem ipsum",
+      "TITLE": "Victims",
+      "PUBDATE": "August 6, 2019"
     }
   ]
 }

@@ -8,7 +8,7 @@ export default class FuseNav {
    * @param {boolean}  [opts.seriesSequence=false] If true, adds Part 1+ headings to slugs
    * @param {boolean} [opts.removeCards=false] If true, removes end-of-story cards after render
    */
-  constructor(element, { seriesSequence = false, removeCards = false }) {
+  constructor(element, { seriesSequence = false, removeCards = false } = {}) {
     this.navBar = createElement('div', 'fuse-nav-bar');
     this.element = element;
     this.market = this.element.getAttribute('data-market');
@@ -18,12 +18,12 @@ export default class FuseNav {
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <img src="${logo}" alt="Miami Herald Logo" class="fuse-nav-logo">
+     <img src="${logo}" alt="Series Logo" class="fuse-nav-logo">
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;
 
-    const articles = this.element.querySelectorAll('.card');
+    const articles = this.element.querySelectorAll('article.card');
     const nav = navBar.querySelector('nav');
 
     const isLive = (clone, index) => {
@@ -37,7 +37,7 @@ export default class FuseNav {
     }
 
     for (let i = 0; i < articles.length; i++) {
-      let info = articles[i].querySelector('.card__info .nav-link');
+      let info = articles[i].querySelector('.nav-link');
 
       let clone = info.cloneNode(true);
       let navItem = createElement('div', 'fuse-nav-item');
@@ -50,11 +50,11 @@ export default class FuseNav {
         clone.innerHTML = `<span class="nav-chapter">${isLive(clone, i)}</span><span class="nav-title">${clone.dataset.title}</span>`;
       } else if (this.series) {
         clone.innerHTML = `<span class="nav-chapter">&nbsp;</span><span class="nav-title">${
-          clone.dataset.title
+          clone.dataset.title.toProperCase()
         }</span>`;
       }
        else {
-        clone.innerHTML = `<span class="nav-title">${
+        clone.innerHTML = `<span class="nav-title no-series">${
           clone.dataset.title
         }</span>`;
       }
@@ -68,6 +68,7 @@ export default class FuseNav {
     window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
 
     this.toggleNav();
+    this.getCurrentURL();
     // Removes story cards if true
     if (this.removeCards) this.element.remove();
   }
