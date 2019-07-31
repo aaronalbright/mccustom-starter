@@ -3,7 +3,10 @@ import logo from '../../assets/logo.svg';
 export default class FuseNav {
   /**
    * Creates sticky navigation
-   * @param {Node} element The target element to append the navigation
+   * @param {Element} element The target element to append the navigation
+   * @param {Object} opts Options that control nav rendering
+   * @param {boolean}  [opts.seriesSequence=false] If true, adds Part 1+ headings to slugs
+   * @param {boolean} [opts.removeCards=false] If true, removes end-of-story cards after render
    */
   constructor(element, { seriesSequence = false, removeCards = false }) {
     this.navBar = createElement('div', 'fuse-nav-bar');
