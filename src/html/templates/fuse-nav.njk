@@ -1,14 +1,14 @@
     <h4>More from the series</h4>
-<div class="fuse-read-more" data-market="miamiherald">
+<div class="fuse-read-more" data-market="charlotteobserver">
     {% for story in stories %}
     <article class="card">
         <figure>
-            <a href="https://www.miamiherald.com/latest-news/article{{story.URL}}.html">
-                <img src="https://picsum.photos/640/359/?image={{loop.index0}}" alt="Related story image">
+            <a href="https://www.charlotteobserver.com/news/state/article{{story.URL}}.html">
+                <img src="{{story.IMG}}" alt="Related story image">
             </a>
         </figure>
         <div class="package">
-            <h3><a class="nav-link" href="https://www.miamiherald.com/latest-news/article{{story.URL}}.html" data-title="{{story.TITLE}}" data-head="{{story.HEADLINE}}">{{story.HEADLINE}}</a></h3>
+            <h3><a class="nav-link" href="https://www.charlotteobserver.com/news/state/article{{story.URL}}.html" data-title="{{story.TITLE}}" data-head="{{story.HEADLINE}}">{{story.HEADLINE}}</a></h3>
             <time>{{story.PUBDATE}}</time>
         </div>
     </article>

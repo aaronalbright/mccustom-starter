@@ -1,5 +1,4 @@
 import { q$, q$1 } from './helpers';
-import logo from '../../assets/logo.svg';
 export default class FuseNav {
   /**
    * Creates sticky navigation
@@ -18,7 +17,9 @@ export default class FuseNav {
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <img src="${logo}" alt="Series Logo" class="fuse-nav-logo">
+     <div class="fuse-nav-logo"><img src="https://www.charlotteobserver.com/wps/build/images/${
+       this.market
+     }/logo.svg" alt="Series Logo"></div>
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;

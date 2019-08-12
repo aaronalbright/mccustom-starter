@@ -40,16 +40,19 @@ NAV BAR STYLES
   &--visible {
     transform: translateY(0);
   }
-  svg,
-  .svg,
   .fuse-nav-logo {
-    margin: 0;
-    &.market {
-      filter: invert(1) brightness(3) saturate(0);
-    }
+    flex: 0 1 250px;
+    max-width: 255px;
+    padding-right: 5px;
+  }
+  .fuse-nav-logo > img {
+    min-width: 100%;
+    min-height: 100%;
+    filter: invert(1) brightness(3) saturate(0);
   }
   nav {
     display: flex;
+    flex: 0 0 auto;
     color: #fff;
     align-self: stretch;
   }
@@ -138,7 +141,7 @@ NAV BAR STYLES
 @media (max-width: 767px) {
   .fuse-nav-bar .fuse-nav-logo {
     height: auto;
-    width: 220px;
+    max-width: 200px;
   }
   .fuse-nav-bar nav {
     display: flex;
