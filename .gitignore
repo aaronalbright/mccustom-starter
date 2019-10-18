@@ -10,6 +10,7 @@ build
 src/assets
 src/html/templates/sinclair-base.njk
 src/html/templates/immersive-base.njk
+src/html/global.json
 
 # Auth credentials
 drive.json

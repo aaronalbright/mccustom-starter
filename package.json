@@ -13,12 +13,13 @@
   },
   "config": {
     "remote": "https://media.miamiherald.com/static/media/projects/2019/",
+    "projectName": "nc-florence",
     "docID": "",
     "sheetID": "1mYPbC405wOYtIFvIhx1dkEyhchfl1KKAh1wv-mFtzYE"
   },
   "scripts": {
     "start": "parcel src/html/index.njk -p 3000",
-    "build": "parcel build src/html/embed.njk --public-url $npm_package_config_remote$npm_package_name --out-dir build",
+    "build": "parcel build src/html/embed.njk --public-url $npm_package_config_remote$npm_package_config_projectName --out-dir build",
     "get:doc": "node ./utils/get-data.js $npm_package_config_docID doc",
     "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
     "push:sheet": "node ./utils/update-sheet.js $npm_package_config_sheetID"

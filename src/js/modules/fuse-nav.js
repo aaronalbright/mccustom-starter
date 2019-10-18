@@ -18,7 +18,7 @@ export default class FuseNav {
     let navBar = this.navBar;
     navBar.innerHTML = `
      <div class="fuse-nav-logo"><img src="https://www.charlotteobserver.com/wps/build/images/${
-       this.market
+       window.pageInfo['marketInfo.domain']
      }/logo.svg" alt="Series Logo"></div>
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>

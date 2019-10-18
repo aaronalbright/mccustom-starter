@@ -46,8 +46,8 @@ NAV BAR STYLES
     padding-right: 5px;
   }
   .fuse-nav-logo > img {
-    min-width: 100%;
-    min-height: 100%;
+    max-height: 30px;
+    max-width: 100%;
     filter: invert(1) brightness(3) saturate(0);
   }
   nav {
