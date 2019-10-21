@@ -1,5 +1,9 @@
-.story-template > .story-rail {
+.story-template > .story-rail, section.immersive-summary {
   display: none;
+}
+
+.story-template {
+  display: block;
 }
 
 #zerg-target,

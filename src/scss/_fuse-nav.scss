@@ -20,6 +20,7 @@ NAV BAR STYLES
 **************/
 
 .fuse-nav-bar {
+  --lc: #6A1C1C;
   position: fixed;
   top: 0;
   left: 0;
@@ -46,9 +47,9 @@ NAV BAR STYLES
     padding-right: 5px;
   }
   .fuse-nav-logo > img {
-    max-height: 30px;
+    max-height: 36px;
+    transform: translateY(-1px);
     max-width: 100%;
-    filter: invert(1) brightness(3) saturate(0);
   }
   nav {
     display: flex;

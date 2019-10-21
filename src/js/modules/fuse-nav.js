@@ -1,4 +1,5 @@
 import { q$, q$1 } from './helpers';
+import logo from '../../assets/stricken.png';
 export default class FuseNav {
   /**
    * Creates sticky navigation
@@ -10,16 +11,13 @@ export default class FuseNav {
   constructor(element, { seriesSequence = false, removeCards = false } = {}) {
     this.navBar = createElement('div', 'fuse-nav-bar');
     this.element = element;
-    this.market = this.element.getAttribute('data-market');
     this.series = seriesSequence;
     this.removeCards = removeCards;
   }
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <div class="fuse-nav-logo"><img src="https://www.charlotteobserver.com/wps/build/images/${
-       window.pageInfo['marketInfo.domain']
-     }/logo.svg" alt="Series Logo"></div>
+     <div class="fuse-nav-logo"><img src="${logo}" alt="Series Logo"></div>
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;
@@ -69,8 +67,7 @@ export default class FuseNav {
     window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
 
     this.toggleNav();
-    this.getCurrentURL();
-    // Removes story cards if true
+    // this.getCurrentURL();
     if (this.removeCards) this.element.remove();
   }
   getCurrentURL() {
