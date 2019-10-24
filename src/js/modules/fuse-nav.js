@@ -67,11 +67,14 @@ export default class FuseNav {
     window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
 
     this.toggleNav();
-    // this.getCurrentURL();
-    if (this.removeCards) this.element.remove();
+    this.getCurrentURL();
+    if (this.removeCards) {
+      this.element.remove();
+      q$1('h4.fuse-subhead').remove();
+    }
   }
   getCurrentURL() {
-    let sourceURL = q$1('meta[name=original-source]').content || undefined;
+    let sourceURL = q$1('meta[name=original-source]').content;
     let navItems = q$('.fuse-nav-item > a');
     let regex = /\d+(?=\.html)/;
     for (let item of navItems) {
@@ -81,6 +84,8 @@ export default class FuseNav {
         break;
       }
     }
+
+    return sourceURL.match(regex)[0];
   }
   toggleNav() {
     q$1('.mob-read-more').addEventListener('click', function() {
