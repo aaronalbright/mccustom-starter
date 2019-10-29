@@ -18,6 +18,34 @@
   height: 100%;
 }
 
+.immersive::before {
+    display: block;
+    content: "";
+    width: 100%;
+    padding-top: calc(9 / 16 * 100%);
+}
+
+figure.photo-inline-square {
+  margin-left: 30px;
+}
+
+.immersive .media {
+  display: flex;
+  background-position: top;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fff;
+  height: unset;
+  .content {
+    display: none;
+  }
+}
+
 .title {
   --headline-size: 3em;
 }

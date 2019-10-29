@@ -26,14 +26,14 @@ export default class FuseNav {
     const nav = navBar.querySelector('nav');
 
     const isLive = (clone, index) => {
-      if (clone.dataset.head == "Coming Soon") {
-        return 'Coming Soon'
+      if (clone.dataset.head == 'Coming Soon') {
+        return 'Coming Soon';
       } else if (clone.localName == 'div') {
-        return clone.dataset.head
+        return clone.dataset.head;
       } else {
-        return `Part ${index + 1}`
+        return `Part ${index + 1}`;
       }
-    }
+    };
 
     for (let i = 0; i < articles.length; i++) {
       let info = articles[i].querySelector('.nav-link');
@@ -45,17 +45,15 @@ export default class FuseNav {
         clone.classList.add('no-link');
       }
 
-      if (this.series && clone.dataset.title !== "Explore") {
-        clone.innerHTML = `<span class="nav-chapter">${isLive(clone, i)}</span><span class="nav-title">${clone.dataset.title}</span>`;
+      if (this.series && clone.dataset.title !== 'Explore') {
+        clone.innerHTML = `<span class="nav-chapter">${isLive(
+          clone,
+          i
+        )}</span><span class="nav-title">${clone.dataset.title}</span>`;
       } else if (this.series) {
-        clone.innerHTML = `<span class="nav-chapter">&nbsp;</span><span class="nav-title">${
-          clone.dataset.title.toProperCase()
-        }</span>`;
-      }
-       else {
-        clone.innerHTML = `<span class="nav-title no-series">${
-          clone.dataset.title
-        }</span>`;
+        clone.innerHTML = `<span class="nav-chapter">&nbsp;</span><span class="nav-title">${clone.dataset.title.toProperCase()}</span>`;
+      } else {
+        clone.innerHTML = `<span class="nav-title no-series">${clone.dataset.title}</span>`;
       }
 
       navItem.appendChild(clone);
@@ -77,6 +75,9 @@ export default class FuseNav {
     let sourceURL = q$1('meta[name=original-source]').content;
     let navItems = q$('.fuse-nav-item > a');
     let regex = /\d+(?=\.html)/;
+    
+    if (!sourceURL.match(regex)) return;
+
     for (let item of navItems) {
       if (item.href.match(regex)[0] === sourceURL.match(regex)[0]) {
         item.classList.add('fuse-active-item');
@@ -84,8 +85,6 @@ export default class FuseNav {
         break;
       }
     }
-
-    return sourceURL.match(regex)[0];
   }
   toggleNav() {
     q$1('.mob-read-more').addEventListener('click', function() {
