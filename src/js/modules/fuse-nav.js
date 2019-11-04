@@ -75,14 +75,12 @@ export default class FuseNav {
     let sourceURL = q$1('meta[name=original-source]').content;
     let navItems = q$('.fuse-nav-item > a');
     let regex = /\d+(?=\.html)/;
-    
-    if (!sourceURL.match(regex)) return;
 
+    if (!sourceURL.match(regex)) return;
+    
     for (let item of navItems) {
       if (item.href.match(regex)[0] === sourceURL.match(regex)[0]) {
         item.classList.add('fuse-active-item');
-      } else {
-        break;
       }
     }
   }
