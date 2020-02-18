@@ -8,8 +8,6 @@ node_modules
 dist
 build
 src/assets
-src/html/templates/sinclair-base.njk
-src/html/templates/immersive-base.njk
 src/html/global.json
 
 # Auth credentials
