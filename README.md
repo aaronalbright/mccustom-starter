@@ -1,71 +1,76 @@
 # McCustom Starter
+
 Basic static site builder to be used on McClatchy Sinclair pages.
 
 Built with [Parcel.js](https://parceljs.org/).
 
 **Includes**
-* `babel 7`
-* `sass`
-* `autoprefixer`
-* `eslint`
-* `nunjucks`
 
+- `babel 7`
+- `sass`
+- `autoprefixer`
+- `eslint`
+- `nunjucks`
 
 ## Install
 
-```
-git clone https://github.com/aaronalbright/mccustom-starter
-yarn
-```
+You can clone this repo as usual, or use [`create-clone`](https://github.com/rdmurphy/create-clone).
 
-If you want a fresh git repo
 ```
-rm -rf git
-git init
+yarn create clone aaronalbright/mccustomer-starter <newProjectName>
+# or
+npm init clone aaronalbright/mccustomer-starter <newProjectName>
 ```
 
 ### Using nunjucks
-The context file that gets rendered with the template is stored in `src/html/global.json`.
+
+The context file that gets rendered with the template is stored in `src/data/context.json`.
 
 ### To start a server at `localhost:3000`
+
 ```
 yarn start
 ```
 
 ### Build a static site
+
 ```
 yarn build
 ```
+
 Builds files into `build/`
 
 ## Fetching external data
 
-1. Create a Google Doc or Sheet. 
+1. Create a Google Doc or Sheet.
 2. Share it with McClatchy's Google service account.
-3. Place the Google auth tokens file in your local home directory.
+3. Place the Google auth tokens file in your local home directory. (You'll get these from a Design Team member)
 4. Copy the doc ID (between `d/` and `/edit` from the URL) and place it in either `config.docID` or `config.sheetID` in `package.json`
 
 ![docID](docs/img/google-id.png)
 
 Currently, you can only work with one or the other, unless you change the output in `/utils/get-data.js`.
 
-This feature is exclusively designed for use as the nunjucks templating context (i.e. `global.json`).
+This feature is exclusively designed for use as the nunjucks templating context (i.e. `context.json`).
 
-Eventually, everything will be put in a `./data` folder.
+Eventually, all fetched files will be able to be placed in the `./data` folder.
 
 ### Get [AML-formatted](http://archieml.org/) Google Doc
+
 ```
 yarn get:doc
 ```
 
 ### Get Google Sheet
+
 ```
 yarn get:sheet
 ```
 
-Files are saved to `src/html/global.json`.
+The file is saved to `src/data/context.json`.
 
 ### Fetch a Google Sheet and update an extneral file via SSH
+
 ```
 yarn push:sheet
 ```
@@ -74,10 +79,5 @@ yarn push:sheet
 
 ## To do
 
-* Better handling of multiple data sources
-* Option for not storing data as a nunjucks context
-
-
-
-
-
+- Better handling of multiple data sources
+- Option for not storing data as a nunjucks context
