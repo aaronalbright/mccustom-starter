@@ -2,50 +2,27 @@
 @import url('https://media.mcclatchy.com/static/creatives/immersive/cleanup.css');
 @import 'fuse-nav.scss';
 
+// Responsive iframe aspect ratio
+
 .mcclatchy-embed {
   position: relative;
-  padding: 0 0 56.25%;
-  height: 0 !important;
-  overflow: hidden;
-  max-width: 100%;
-}
-
-.mcclatchy-embed > iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.immersive::before {
+  &:before {
     display: block;
-    content: "";
+    content: '';
     width: 100%;
-    padding-top: calc(9 / 16 * 100%);
+    padding-top: (9 / 16) * 100%;
+  }
+  > iframe {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 figure.photo-inline-square {
   margin-left: 30px;
-}
-
-.immersive .media {
-  display: flex;
-  background-position: top;
-  background-size: contain;
-  background-repeat: no-repeat;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #fff;
-  height: unset;
-  .content {
-    display: none;
-  }
-}
-
-.title {
-  --headline-size: 3em;
 }

@@ -1,5 +1,5 @@
-const $ = document.querySelectorAll.bind(document);
-const $1 = document.querySelector.bind(document);
+// window.$ = document.querySelectorAll.bind(document);
+window.$1 = document.querySelector.bind(document);
 
 Node.prototype.on = window.on = function(name, fn) {
   this.addEventListener(name, fn);

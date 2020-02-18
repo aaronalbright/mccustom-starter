@@ -1,5 +1,4 @@
-import { q$, q$1 } from './helpers';
-import logo from '../../assets/stricken.png';
+import './bling';
 export default class FuseNav {
   /**
    * Creates sticky navigation
@@ -17,7 +16,7 @@ export default class FuseNav {
   init() {
     let navBar = this.navBar;
     navBar.innerHTML = `
-     <div class="fuse-nav-logo"><img src="${logo}" alt="Series Logo"></div>
+     <div class="fuse-nav-logo"><img src="" alt="Series Logo"></div>
     <nav></nav>
     <div class="mob-read-more">Read more<span class="glyphicon glyphicon-chevron-down"></span></div>
     `;
@@ -62,22 +61,25 @@ export default class FuseNav {
 
     this.element.parentNode.insertBefore(navBar, this.element.nextSibling);
 
-    window.addEventListener('scroll', debounce(() => this.toggleBar(), 50));
+    window.addEventListener(
+      'scroll',
+      debounce(() => this.toggleBar(), 50)
+    );
 
     this.toggleNav();
     this.getCurrentURL();
     if (this.removeCards) {
       this.element.remove();
-      q$1('h4.fuse-subhead').remove();
+      $1('h4.fuse-subhead').remove();
     }
   }
   getCurrentURL() {
-    let sourceURL = q$1('meta[name=original-source]').content;
-    let navItems = q$('.fuse-nav-item > a');
+    let sourceURL = $1('meta[name=original-source]').content;
+    let navItems = $('.fuse-nav-item > a');
     let regex = /\d+(?=\.html)/;
 
     if (!sourceURL.match(regex)) return;
-    
+
     for (let item of navItems) {
       if (item.href.match(regex)[0] === sourceURL.match(regex)[0]) {
         item.classList.add('fuse-active-item');
@@ -85,15 +87,15 @@ export default class FuseNav {
     }
   }
   toggleNav() {
-    q$1('.mob-read-more').addEventListener('click', function() {
-      q$1('.fuse-nav-bar nav').classList.toggle('nav-mob-shown');
+    $1('.mob-read-more').addEventListener('click', function() {
+      $1('.fuse-nav-bar nav').classList.toggle('nav-mob-shown');
       this.classList.toggle('mob-read-more--on');
     });
   }
   toggleBar() {
     let bar = this.navBar;
-    let mobNav = q$1('.fuse-nav-bar nav');
-    let mobReadMore = q$1('.mob-read-more');
+    let mobNav = $1('.fuse-nav-bar nav');
+    let mobReadMore = $1('.mob-read-more');
     if (window.scrollY < window.innerHeight / 2) {
       bar.classList.remove('fuse-nav-bar--visible');
       mobNav.classList.remove('nav-mob-shown');
