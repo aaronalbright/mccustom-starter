@@ -1,6 +1,6 @@
 {
   "name": "custom-cue-start",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "license": "MIT",
   "dependencies": {
     "autoprefixer": "^9.5.1",
@@ -29,6 +29,6 @@
     "@babel/preset-env": "^7.4.3",
     "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",
-    "parcel-plugin-nunjucks": "git+https://git@github.com/aaronalbright/parcel-plugin-nunjucks.git"
+    "parcel-plugin-nunjucks": "^2.2.0"
   }
 }
