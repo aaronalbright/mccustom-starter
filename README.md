@@ -16,7 +16,7 @@ Built with [Parcel.js](https://parceljs.org/).
 
 You can clone this repo as usual, or use [`create-clone`](https://github.com/rdmurphy/create-clone).
 
-```
+```sh
 yarn create clone aaronalbright/mccustomer-starter <newProjectName>
 # or
 npm init clone aaronalbright/mccustomer-starter <newProjectName>
@@ -28,13 +28,13 @@ The context file that gets rendered with the template is stored in `src/data/con
 
 ### To start a server at `localhost:3000`
 
-```
+```sh
 yarn start
 ```
 
 ### Build a static site
 
-```
+```sh
 yarn build
 ```
 
@@ -57,13 +57,13 @@ Eventually, all fetched files will be able to be placed in the `./data` folder.
 
 ### Get [AML-formatted](http://archieml.org/) Google Doc
 
-```
+```sh
 yarn get:doc
 ```
 
 ### Get Google Sheet
 
-```
+```sh
 yarn get:sheet
 ```
 
