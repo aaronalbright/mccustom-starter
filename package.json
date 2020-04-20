@@ -12,7 +12,8 @@
     "sass": "^1.22.9"
   },
   "config": {
-    "remote": "https://media.miamiherald.com/static/media/projects/2019/",
+    "cueID": "242091091",
+    "remote": "https://media.miamiherald.com/static/media/projects/2020/",
     "projectName": "stricken",
     "docID": "",
     "sheetID": "1uLBa4vVkCVJPQWH33RJ9dx-xyS_J4oS2D8iHJBmGOak"
@@ -22,11 +23,15 @@
     "build": "parcel build src/html/embed.njk --public-url $npm_package_config_remote$npm_package_config_projectName --out-dir build",
     "get:doc": "node ./utils/get-data.js $npm_package_config_docID doc",
     "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
-    "push:sheet": "node ./utils/update-sheet.js $npm_package_config_sheetID"
+    "push:sheet": "node ./utils/update-sheet.js $npm_package_config_sheetID",
+    "deploy:cue": "make PROJ_NAME=$npm_package_config_projectName deploy && node ./utils/update-cue.js $npm_package_config_cueID",
+    "deploy:test": "node ./utils/update-cue.js $npm_package_config_cueID"
   },
+  "browserslist": "defaults, not ie <= 11",
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.4.3",
+    "axios": "^0.19.2",
     "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",
     "parcel-plugin-nunjucks": "^2.2.0"
