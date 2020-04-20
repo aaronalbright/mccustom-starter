@@ -1,4 +1,3 @@
-import './modules/bling';
 import FuseNav from './modules/fuse-nav';
 
 // Rearranges headers from lead image to story body
@@ -11,11 +10,11 @@ import FuseNav from './modules/fuse-nav';
 // header.insertBefore(headline, header.firstElementChild);
 // header.insertBefore(h6, header.firstElementChild);
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const readMore = $1('.fuse-read-more');
   const nav = new FuseNav(readMore, {
     seriesSequence: false,
-    removeCards: true
+    removeCards: true,
   });
 
   nav.init();
