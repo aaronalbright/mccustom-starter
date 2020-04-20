@@ -6,14 +6,12 @@
     "jquery": true
   },
   "globals": {
-    "$1": true
+    "$1": true,
+    "pageInfo": true
   },
   "extends": "eslint:recommended",
   "parserOptions": {
-    "ecmaVersion": 2017,
-    "ecmaFeatures": {
-      "jsx": true
-    },
+    "ecmaVersion": 2018,
     "sourceType": "module"
   },
   "rules": {
