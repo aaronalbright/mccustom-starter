@@ -17,9 +17,9 @@ Built with [Parcel.js](https://parceljs.org/).
 You can clone this repo as usual, or use [`create-clone`](https://github.com/rdmurphy/create-clone).
 
 ```sh
-yarn create clone aaronalbright/mccustomer-starter <newProjectName>
+yarn create clone aaronalbright/mccustom-starter <newProjectName>
 # or
-npm init clone aaronalbright/mccustomer-starter <newProjectName>
+npm init clone aaronalbright/mccustom-starter <newProjectName>
 ```
 
 ### Using nunjucks
