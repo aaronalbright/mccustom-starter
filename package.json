@@ -31,7 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.4.3",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",
     "parcel-plugin-nunjucks": "^2.2.0"
