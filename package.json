@@ -34,6 +34,8 @@
     "axios": "^0.21.1",
     "dotenv": "^7.0.0",
     "fs-extra": "^7.0.1",
-    "parcel-plugin-nunjucks": "^2.2.0"
+    "parcel-plugin-nunjucks": "^2.2.0",
+    "parcel-plugin-svelte": "^4.0.6",
+    "svelte": "^3.32.0"
   }
 }

@@ -20,7 +20,6 @@ NAV BAR STYLES
 **************/
 
 .fuse-nav-bar {
-  --lc: hsl(235, 32%, 48%);
   position: fixed;
   top: 0;
   left: 0;
@@ -36,7 +35,7 @@ NAV BAR STYLES
   align-items: center;
   justify-content: space-between;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.13);
-  transition: transform 200ms ease;
+  transition: transform 500ms 200ms ease;
   transform: translateY(-60px);
   &--visible {
     transform: translateY(0);
@@ -45,7 +44,17 @@ NAV BAR STYLES
     flex: 0 1 250px;
     max-width: 255px;
     padding-right: 5px;
+    &.fuse-nav-logo--no-image {
+      flex: 0 1 auto;
+      max-width: unset;
+    }
   }
+  .fuse-nav-logo--no-image > .nav-logo__text {
+    font-size: 1.2em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  } 
   .fuse-nav-logo > img {
     max-height: 36px;
     transform: translateY(-1px);
@@ -82,6 +91,7 @@ NAV BAR STYLES
     color: #fff;
     transition: 200ms ease;
     border-bottom: 0px solid rgba(0, 0, 0, 0);
+    will-change: margin-top, border-bottom;
     span:first-child {
       transition: margin 200ms ease;
     }
@@ -99,7 +109,7 @@ NAV BAR STYLES
   }
 }
 
-.fuse-nav-item .fuse-active-item {
+nav:not(.dropdown-enabled) .fuse-nav-item .nav-link--active {
   background: #222;
   color: #fff !important;
   border-bottom: 5px solid var(--lc);
@@ -133,8 +143,65 @@ NAV BAR STYLES
   }
 }
 
-@media (min-width: 768px) {
-  .mob-read-more {
+.fuse-nav-bar nav.dropdown-enabled {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  padding-top: 50px;
+  background-color: hsla(0, 0%, 10%, 0.97);
+  max-height: 0;
+  transition: max-height 375ms ease, visibility 0.2s 0.25s linear,
+    opacity 0.2s 0.25s linear;
+  overflow: hidden;
+  box-shadow: inset 0px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  opacity: 0;
+  visibility: hidden;
+  .fuse-nav-item a,
+  .fuse-nav-item .nav-link {
+    padding: 15px;
+    color: #fff !important;
+  }
+  a:not(.nav-link--active) {
+    margin-left: 5px;
+  }
+  .nav-link--active {
+    border-left: 5px solid var(--lc);
+    background: none;
+    border-bottom: none;
+    span {
+      margin: 0;
+    }
+  }
+  .fuse-nav-item a:hover {
+    border-bottom: none;
+    border-left: 5px solid var(--lc);
+    margin-left: 0;
+    span {
+      margin: 0;
+    }
+  }
+  &.nav-mob-shown {
+    opacity: 1;
+    visibility: visible;
+    max-height: 100vh;
+    transition: max-height 1s ease, visibility 0.1s 130ms linear,
+      opacity 0.1s 130ms linear;
+  }
+}
+
+@media (min-width: 600px) {
+  .fuse-nav-bar nav.dropdown-enabled {
+    background-color: rgba(55, 55, 55, 1);
+    max-width: 30%;
+    left: 70%;
+    top: 50px;
+    padding-top: 0;
+  }
+  .fuse-nav-bar nav:not(.dropdown-enabled) + .mob-read-more {
     display: none;
   }
 }
@@ -143,6 +210,15 @@ NAV BAR STYLES
   .fuse-nav-bar .fuse-nav-logo {
     height: auto;
     max-width: 200px;
+  }
+  .fuse-nav-bar .fuse-nav-logo--no-image > .nav-logo__text {
+    font-size: 1em;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+  } 
+  .nav-link[data-title='Explore'] > .nav-chapter {
+    display: none;
   }
   .fuse-nav-bar nav {
     display: flex;
@@ -166,11 +242,12 @@ NAV BAR STYLES
       padding: 15px;
       color: #fff !important;
     }
-    a:not(.fuse-active-item) {
+    a:not(.nav-link--active) {
       margin-left: 5px;
     }
-    .fuse-active-item {
+    .nav-link--active {
       border-left: 5px solid var(--lc);
+      border-bottom: none !important;
       background: none;
       border-bottom: none;
       span {
@@ -193,7 +270,5 @@ NAV BAR STYLES
         opacity 0.1s 130ms linear;
     }
   }
-  .nav-link[data-title='Explore'] > .nav-chapter {
-    display: none;
-  }
+  
 }
