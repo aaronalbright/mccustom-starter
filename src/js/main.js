@@ -1,8 +1,6 @@
-import './modules/bling.js';
-import FuseNav from './components/FuseNav.svelte'
+import './modules/bling';
+import FuseNav from './components/FuseNav.svelte';
 
-document.addEventListener('DOMContentLoaded', function () {
-  new FuseNav({
+new FuseNav({
     target: $1('#FuseNav')
-  })
-});
+})

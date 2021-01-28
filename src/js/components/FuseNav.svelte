@@ -2,7 +2,7 @@
     import '../../scss/fuse-nav.scss'
     // import logo from '../../assets/birth-betrayal_reversed-logo_12-2020.png';
 
-    export let titles = 'One, Two, Three, Four';
+    export let titles = ['One','Two','Three','Four']
     export let textLogo = 'Hello World';
 
     let links  = getNavLinks(titles);
@@ -38,7 +38,8 @@
         if (!sourceURL.match(regex)) sourceURL = '/000000.html';
         return links.map((d, i) => {
             const headline = d.querySelector('h4').innerText;
-            const isActive = d.href.match(regex)[0] == sourceURL.match(regex)[0];
+            const articleID = d.href.match(regex);
+            const isActive = articleID?.[0] == sourceURL.match(regex)[0];
             return {
                 url: d.href,
                 headline,

@@ -1,25 +1,3 @@
 {
-  "stories": [
-    {
-      "SLUG": "MAINBAR",
-      "TITLE": "War with Bob",
-      "URL": "https://www.mcclatchydc.com/news/nation-world/national/national-security/article236413328.html",
-      "PUBDATE": "October 31, 2019",
-      "HEADLINE": "New data on veterans shows rise in cancers over two decades of war"
-    },
-    {
-      "SLUG": "SIDEBAR",
-      "TITLE": "Aviators Afflicted",
-      "URL": "https://www.mcclatchydc.com/news/nation-world/national/national-security/article236413708.html",
-      "PUBDATE": "October 31, 2019",
-      "HEADLINE": "Four commanding officers at California Navy base died of cancer "
-    },
-    {
-      "SLUG": "METHODOLOGY",
-      "TITLE": "Methodology",
-      "URL": "https://www.mcclatchydc.com/news/nation-world/national/national-security/article236421513.html",
-      "PUBDATE": "October 31, 2019",
-      "HEADLINE": "How McClatchy analyzed the data for its veterans cancer investigation"
-    }
-  ]
+  "title": "Story Test"
 }
