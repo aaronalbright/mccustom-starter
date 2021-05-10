@@ -1,5 +1,5 @@
 embed:
-	cat build/embed.html | pbcopy
+	cat dist/embed.html | pbcopy
 
 deploy:
-	rsync -rvzL -i --update --ignore-existing -e ssh build/ mia.mi:miamiherald.com/static/media/projects/2020/${PROJ_NAME}
+	rsync -rvzL -i --update --ignore-existing -e ssh dist/ mcc.mi:2021/${PROJ_NAME}

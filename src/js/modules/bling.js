@@ -1,4 +1,4 @@
-// window.$ = document.querySelectorAll.bind(document);
+window.$all = document.querySelectorAll.bind(document);
 window.$1 = document.querySelector.bind(document);
 
 Node.prototype.on = window.on = function(name, fn) {

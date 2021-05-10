@@ -1,41 +1,37 @@
 {
   "name": "custom-cue-start",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "license": "MIT",
-  "dependencies": {
-    "autoprefixer": "^9.5.1",
-    "eslint": "^5.16.0",
-    "gootenberg": "^1.0.0",
-    "node-ssh": "^6.0.0",
-    "nunjucks": "^3.2.0",
-    "parcel-bundler": "^1.12.3",
-    "sass": "^1.22.9"
-  },
+  "dependencies": {},
   "config": {
-    "cueID": "242091091",
-    "remote": "https://media.miamiherald.com/static/media/projects/2021/",
-    "projectName": "test",
+    "cueID": "",
+    "remote": "https://media.mcclatchy.com/static/2021/",
+    "projectName": "",
     "docID": "",
-    "sheetID": "1uLBa4vVkCVJPQWH33RJ9dx-xyS_J4oS2D8iHJBmGOak"
+    "sheetID": ""
   },
   "scripts": {
-    "start": "parcel src/html/index.njk -p 3000",
-    "build": "parcel build src/html/embed.njk --public-url $npm_package_config_remote$npm_package_config_projectName --out-dir build --no-source-maps",
+    "dev": "vite",
+    "build": "vite build --base $npm_package_config_remote${PWD##*/}/",
     "get:doc": "node ./utils/get-data.js $npm_package_config_docID doc",
     "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
     "push:sheet": "node ./utils/update-sheet.js $npm_package_config_sheetID",
+    "deploy:static": "make PROJ_NAME=${PWD##*/} deploy",
     "deploy:cue": "make PROJ_NAME=$npm_package_config_projectName deploy && node ./utils/update-cue.js $npm_package_config_cueID",
     "deploy:test": "node ./utils/update-cue.js $npm_package_config_cueID"
   },
   "browserslist": "defaults, not ie <= 11",
   "devDependencies": {
-    "@babel/core": "^7.5.5",
-    "@babel/preset-env": "^7.4.3",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.9",
     "axios": "^0.21.1",
     "dotenv": "^7.0.0",
+    "eslint": "^5.16.0",
     "fs-extra": "^7.0.1",
-    "parcel-plugin-nunjucks": "^2.2.0",
-    "parcel-plugin-svelte": "^4.0.6",
-    "svelte": "^3.32.0"
+    "gootenberg": "^1.6.2",
+    "node-ssh": "^6.0.0",
+    "postcss-nesting": "^8.0.1",
+    "svelte": "^3.32.0",
+    "vite": "^2.2.4",
+    "vite-plugin-handlebars": "^1.5.1"
   }
 }

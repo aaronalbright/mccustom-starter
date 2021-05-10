@@ -2,8 +2,7 @@
   "env": {
     "browser": true,
     "node": true,
-    "es6": true,
-    "jquery": true
+    "es2017": true
   },
   "globals": {
     "$1": true,
@@ -15,7 +14,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-console": 0,
+    "no-console": "error",
     "comma-dangle": 0,
     "semi": [0, "always"],
     "no-unused-vars": 1

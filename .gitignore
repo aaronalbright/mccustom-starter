@@ -1,17 +1,14 @@
-# Node and Parcel
 node_modules
 .cache
-
-# Project files
+.DS_Store
 .vscode
 .tmp
 dist
 build
 src/assets
 src/html/global.json
-
-# Auth credentials
 drive.json
 .env
+/templates/embed.html
 
 
