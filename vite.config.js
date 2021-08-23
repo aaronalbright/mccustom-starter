@@ -1,5 +1,5 @@
 import { defineConfig } from 'vite';
-import svelte from '@sveltejs/vite-plugin-svelte';
+import { svelte } from '@sveltejs/vite-plugin-svelte';
 import postcssNesting from 'postcss-nesting';
 import { resolve } from 'path';
 import handlebars from 'vite-plugin-handlebars';
@@ -16,9 +16,9 @@ export default ({ command }) => {
       svelte(),
       handlebars({
         partialDirectory: resolve(__dirname, 'templates'),
-        content: {
-          title: 'CUE Custom Project'
-        }
+        context: {
+          title: 'CUE Custom Project',
+        },
       }),
     ],
     css: {
@@ -27,12 +27,11 @@ export default ({ command }) => {
       },
     },
     build: {
-      polyfillDynamicImport: true,
       rollupOptions: {
         input: {
-          embed: resolve(__dirname, 'embed.html')
+          embed: resolve(__dirname, 'embed.html'),
         },
-      }
+      },
     },
   });
 };

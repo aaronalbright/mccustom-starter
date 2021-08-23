@@ -22,16 +22,17 @@
   },
   "browserslist": "defaults, not ie <= 11",
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.9",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.19",
     "axios": "^0.21.1",
     "dotenv": "^7.0.0",
-    "eslint": "^5.16.0",
+    "eslint": "^7.32.0",
     "fs-extra": "^7.0.1",
     "gootenberg": "^1.6.2",
     "node-ssh": "^6.0.0",
     "postcss-nesting": "^8.0.1",
-    "svelte": "^3.32.0",
-    "vite": "^2.2.4",
-    "vite-plugin-handlebars": "^1.5.1"
+    "svelte": "^3.42.2",
+    "svelte-preprocess": "^4.8.0",
+    "vite": "^2.5.0",
+    "vite-plugin-handlebars": "^1.6.0"
   }
 }
