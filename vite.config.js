@@ -8,8 +8,8 @@ import fs from 'fs';
 // https://vitejs.dev/config/
 export default ({ command }) => {
   if (command === 'build') {
+    // weird workaround to get the embed file to be the main output with proper paths
     fs.copyFileSync(resolve(__dirname, 'templates/embed.html'), 'embed.html');
-    console.log('embed.html copied to root...');
   }
   return defineConfig({
     plugins: [
