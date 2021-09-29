@@ -14,7 +14,7 @@
     "sourceType": "module"
   },
   "rules": {
-    "no-console": "error",
+    "no-console": ["error", { "allow": ["warn", "error"] }],
     "comma-dangle": 0,
     "semi": [0, "always"],
     "no-unused-vars": 1
