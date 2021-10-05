@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const fs = require('fs-extra');
 const Gootenberg = require('gootenberg');
 const { getCredentials } = require('./get-credentials');
