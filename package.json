@@ -6,7 +6,7 @@
   "config": {
     "cueID": "",
     "remote": "/static/hi/2021/",
-    "projectName": "",
+    "projectName": "custom-cue-project",
     "docID": "",
     "sheetID": ""
   },
