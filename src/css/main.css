@@ -1,46 +1,40 @@
 .story-body {
-    transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+}
+
+.dark {
+  --body-background: #373737;
+  & .story-body {
+    --paper-color: #1a1b22;
+    --tc: #e8e8e8;
+    --lc: #6583e6;
   }
-  
-  .dark {
-    --body-background: #373737;
-    & .story-body {
-      --paper-color: #1a1b22;
-      --tc: #e8e8e8;
-      --lc: #6583e6;
-    }
-    & .h3,
-    & h3,
-    & h1,
-    & .h1 {
-      --tc: #fff;
-    }
-    & .related-stories {
-      --lc: var(--tc);
-    }
-    & .share-list .share-icon .link-icon {
-      color: #e8e8e8;
-    }
-    & .button.impact {
-      --paper-color: #e8e8e8;
-      color: #1a1b22;
-    }
-    & .caption,
-    & figcaption,
-    & .gray,
-    & .header {
-      --tc: #bdbdbd;
-    }
-    & .series-nav .summary {
-      color: #bdbdbd;
-    }
-    & .dateline {
-      color: var(--tc, #222);
-    }
+  & .h3,
+  & h3,
+  & h1,
+  & .h1 {
+    --tc: #fff;
   }
-  
-  .sticky-nav {
-    --nav-bg: #3f414e;
-    --nav-tc: #e8e8e8;
+  & .related-stories {
+    --lc: var(--tc);
   }
-  
+  & .share-list .share-icon .link-icon {
+    color: #e8e8e8;
+  }
+  & .button.impact {
+    --paper-color: #e8e8e8;
+    color: #1a1b22;
+  }
+  & .caption,
+  & figcaption,
+  & .gray,
+  & .header {
+    --tc: #bdbdbd;
+  }
+  & .series-nav .summary {
+    color: #bdbdbd;
+  }
+  & .dateline {
+    color: var(--tc, #222);
+  }
+}
