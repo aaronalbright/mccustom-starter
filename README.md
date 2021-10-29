@@ -63,9 +63,3 @@ npm run get:sheet
 ```
 
 The file is saved to `src/data/context.json`.
-
-### Fetch a Google Sheet and update an extneral file via SSH
-
-```
-npm run push:sheet
-```
