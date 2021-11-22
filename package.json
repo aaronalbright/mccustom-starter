@@ -2,7 +2,6 @@
   "name": "custom-cue-start",
   "version": "3.1.1",
   "license": "MIT",
-  "dependencies": {},
   "config": {
     "cueID": "",
     "remote": "/static/hi/2021/",
@@ -17,20 +16,19 @@
     "get:sheet": "node ./utils/get-data.js $npm_package_config_sheetID sheet",
     "deploy:static": "make PROJ_NAME=${PWD##*/} deploy",
     "deploy:cue": "make PROJ_NAME=$npm_package_config_projectName deploy && node ./utils/update-cue.js $npm_package_config_cueID",
-    "deploy:test": "node ./utils/update-cue.js $npm_package_config_cueID"
+    "cue": "node ./utils/update-cue.js $npm_package_config_cueID"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.26",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
     "axios": "^0.21.4",
     "dotenv": "^7.0.0",
     "eslint": "^7.32.0",
-    "fs-extra": "^7.0.1",
+    "fs-extra": "^10.0.0",
     "gootenberg": "^1.6.2",
-    "node-ssh": "^6.0.0",
-    "postcss-nesting": "^8.0.1",
-    "svelte": "^3.43.0",
-    "svelte-preprocess": "^4.9.5",
-    "vite": "^2.6.0",
+    "postcss-nesting": "^10.0.2",
+    "svelte": "^3.44.2",
+    "svelte-preprocess": "^4.9.8",
+    "vite": "^2.6.14",
     "vite-plugin-handlebars": "^1.6.0"
   }
 }

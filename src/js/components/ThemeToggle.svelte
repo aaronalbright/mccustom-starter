@@ -4,24 +4,26 @@
 
   let isDarkMode = true;
 
+  const qSelect = document.querySelector.bind(document);
+
   function darkMode(node) {
-      if (isDarkMode) node.classList.add('dark');
+    if (isDarkMode) node.classList.add('dark');
   }
 
   function moveToTop(node, kind) {
-    // @ts-ignore
-    if (kind == 'themeToggle' && window.$1('.story-body .series-nav')) {
-      document
-        .querySelector('.story-body .series-nav')
-        .parentElement.insertAdjacentElement('beforebegin', node);
+    if (kind == 'themeToggle' && qSelect('.story-body .series-nav')) {
+      qSelect('.story-body .series-nav').parentElement.insertAdjacentElement(
+        'beforebegin',
+        node
+      );
     } else if (kind == 'themeToggle') {
-      document
-        .querySelector('.story-body .dateline, .story-body > p:first-of-type')
-        .insertAdjacentElement('beforebegin', node);
+      qSelect(
+        '.story-body .dateline, .story-body > p:first-of-type'
+      ).insertAdjacentElement('beforebegin', node);
     } else {
-      document
-        .querySelector('.story-body .dateline, .story-body > p:first-of-type')
-        .insertAdjacentElement('beforebegin', node);
+      qSelect(
+        '.story-body .dateline, .story-body > p:first-of-type'
+      ).insertAdjacentElement('beforebegin', node);
     }
   }
 
@@ -31,7 +33,7 @@
   }
 </script>
 
-<svelte:body use:darkMode></svelte:body>
+<svelte:body use:darkMode />
 
 <div use:moveToTop={'themeToggle'}>
   <button title="Toggle color theme" class="theme-toggle" on:click={handleClick}
@@ -40,7 +42,11 @@
 </div>
 
 <style>
-    .theme-toggle {
+  :global(.story-body) {
+    transition: all 200ms ease-in;
+  }
+  
+  .theme-toggle {
     --size: 40px;
     cursor: pointer;
     display: flex;

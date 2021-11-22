@@ -1,9 +1,8 @@
 /* eslint-disable no-console */
 const fs = require('fs-extra');
+const path = require('path');
 const Gootenberg = require('gootenberg');
 const { getCredentials } = require('./get-credentials');
-
-const file = './src/html/global.json';
 
 async function getData() {
   const goot = new Gootenberg();
@@ -14,6 +13,7 @@ async function getData() {
   let data;
   let id = process.argv[2];
   let type = process.argv[3];
+  let file = path.resolve('./data', `${type}Data.json`)
 
   if (type == 'doc') {
     data = await goot.parse.archie(id);

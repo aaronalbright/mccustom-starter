@@ -27,28 +27,28 @@ npm init clone aaronalbright/mccustom-starter <newProjectName>
 npm run dev
 ```
 
-### Build a static site
+### Build a static embed
+
+Puts files into `dist/`. Make sure you update the `name` in `package.json` to ensure the base URL is updated.
 
 ```sh
 npm run build
 ```
 
-Builds files into `build/`
-
 ## Fetching external data
+
+### v2
+As of 2021, we have a new method of using data or documents from Google Drive. 
+By taking advantage of Google Apps Script, you will be able to "publish" content from a Sheet or Document to a McClatchy domain at `www.[domain].com/static/hi/`. This application is still in beta. Below you'll find the original method to extract data from documents.
+
+### v1
 
 1. Create a Google Doc or Sheet.
 2. Share it with McClatchy's Google service account.
-3. Place the Google auth tokens file in your local home directory. (You'll get these from a Design Team member)
+3. Place the Google auth tokens file in your local home directory. (You'll get these from a High Impact Team member)
 4. Copy the doc ID (between `d/` and `/edit` from the URL) and place it in either `config.docID` or `config.sheetID` in `package.json`
 
 ![docID](docs/img/google-id.png)
-
-Currently, you can only work with one or the other, unless you change the output in `/utils/get-data.js`.
-
-This feature is exclusively designed for use as the nunjucks templating context (i.e. `context.json`).
-
-Eventually, all fetched files will be able to be placed in the `./data` folder.
 
 ### Get [AML-formatted](http://archieml.org/) Google Doc
 
@@ -62,4 +62,4 @@ npm run get:doc
 npm run get:sheet
 ```
 
-The file is saved to `src/data/context.json`.
+The file is saved to `src/data/[type]Data.json`.
