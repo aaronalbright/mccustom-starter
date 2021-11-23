@@ -6,4 +6,4 @@
 
 <h3>Lorem ipsum dolor sit amet consectetur</h3>
 
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore consequatur dolor. Fuga accusamus, voluptatum nesciunt et blanditiis corrupti id quos animi sit! Incidunt temporibus voluptate dicta. Aliquid, corrupti recusandae.</p>
+<p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore consequatur dolor. Fuga accusamus, voluptatum nesciunt et blanditiis corrupti id quos animi sit! Incidunt temporibus voluptate dicta. Aliquid, corrupti recusandae.</p>
