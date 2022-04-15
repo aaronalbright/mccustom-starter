@@ -3,7 +3,6 @@
 
   export let titles = 'One|Two|Three|Four|Five|Siz';
   export let textlogo = 'NO_TEXT_LOGO_SET';
-  export let trackingid = '';
   export let homeurl = '#';
 
   $: links = getNavLinks(titles.split('|'));
@@ -31,17 +30,16 @@
 
   // Gathers all links in series nav
   function getNavLinks(titles) {
-    let links = document.querySelectorAll(
-      '.series-nav a'
-    );
+    let links = document.querySelectorAll('.series-nav a');
     if (links.length == 0) {
       links = document.querySelectorAll('.series-content h3 a');
     }
-    if (!links || links.length <= 0)
+    if (!links || links.length <= 0) {
       return titles.map((d, i) => ({
         title: d,
         active: i == 0 ? true : false,
       }));
+    }
     let sourceURL = document.querySelector(
       'meta[name=original-source]'
     ).content;
@@ -60,19 +58,9 @@
     });
   }
 
-  // Adobe tracking function
-  function handleClick(e, part) {
-    if (process.env.NODE_ENV === 'development' || !window.mistats) {
-      e.preventDefault();
-      console.log(`Nav clicked: ${part ? 'Part ' + part : 'dropdown'}`);
-    } else {
-      if (part) {
-        trackInteraction(`${trackingid} nav clicked: Part ${part}`);
-      } else {
-        trackInteraction(`${trackingid} nav clicked: Dropdown`);
-      }
-    }
-
+  function handleClick() {
+    // Disabled scrolling on mobile when the "Read More" button is clicked
+    // Not ideal. This should be handled with a state change to ensure consistent behaviro
     if (window.innerWidth < 768) {
       document.body.classList.toggle('noscroll');
     }
@@ -84,7 +72,10 @@
 <div class="fuse-nav-bar" class:visible={mobileNavCheck(scrollY, navVisible)}>
   <div class="fuse-nav-logo" class:fuse-nav-logo--no-image={textlogo !== null}>
     {#if textlogo !== null}
-      <span class="nav-logo__text">{textlogo}</span><a class="nav-home-btn" href="{homeurl}">{@html home}</a>
+      <span class="nav-logo__text">{textlogo}</span><a
+        class="nav-home-btn"
+        href={homeurl}>{@html home}</a
+      >
     {/if}
   </div>
   <nav
@@ -190,7 +181,7 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    margin-left: .5em;
+    margin-left: 0.5em;
   }
 
   .fuse-nav-item {

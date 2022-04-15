@@ -1,6 +1,6 @@
 {
   "name": "custom-cue-start",
-  "version": "3.1.1",
+  "version": "3.1.2",
   "license": "MIT",
   "config": {
     "cueID": "",
@@ -19,16 +19,16 @@
     "cue": "node ./utils/update-cue.js $npm_package_config_cueID"
   },
   "devDependencies": {
-    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
-    "axios": "^0.21.4",
-    "dotenv": "^7.0.0",
-    "eslint": "^7.32.0",
-    "fs-extra": "^10.0.0",
-    "gootenberg": "^1.6.2",
-    "postcss-nesting": "^10.0.2",
-    "svelte": "^3.44.2",
-    "svelte-preprocess": "^4.9.8",
-    "vite": "^2.6.14",
+    "@sveltejs/vite-plugin-svelte": "^1.0.0-next.41",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.13.0",
+    "fs-extra": "^10.0.1",
+    "gootenberg": "^1.7.0",
+    "postcss-nesting": "^10.1.4",
+    "svelte": "^3.47.0",
+    "svelte-preprocess": "^4.10.6",
+    "vite": "^2.9.5",
     "vite-plugin-handlebars": "^1.6.0"
   }
 }

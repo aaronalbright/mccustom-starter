@@ -11,11 +11,7 @@ import { config as pkgConfig } from './package.json';
 // https://vitejs.dev/config/
 export default async ({ command }) => {
   let miCss;
-  if (command === 'build') {
-    // weird workaround to get the embed file to be the main output with proper paths
-    // fs.copyFileSync(resolve(__dirname, 'templates/embed.html'), 'embed.html');
-    // fs.copyFileSync(resolve(__dirname, 'templates/simple-table.html'), 'simple-table.html');
-  } else {
+  if (command === 'serve') {
     miCss = await getMiCss();
   }
   return defineConfig({
@@ -33,6 +29,11 @@ export default async ({ command }) => {
       postcss: {
         plugins: [postcssNesting],
       },
+    },
+    resolve: {
+      alias: {
+        '/@ProdX': '/Users/aaron/Projects/ProdX/gcp-bucket'
+      }
     },
     build: {
       rollupOptions: {

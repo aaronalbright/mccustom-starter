@@ -76,7 +76,7 @@ async function pushToCUE(response, html) {
 async function init() {
   try {
     const response = await fetchCUEData();
-    const html = await fs.readFile('./build/embed.html', 'utf8');
+    const html = await fs.readFile('./dist/partials/embed.html', 'utf8');
 
     await pushToCUE(response, html);
   } catch (err) {

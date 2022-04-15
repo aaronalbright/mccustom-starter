@@ -4,24 +4,24 @@
 
   let isDarkMode = true;
 
-  const qSelect = document.querySelector.bind(document);
+  const qs = document.querySelector.bind(document);
 
   function darkMode(node) {
     if (isDarkMode) node.classList.add('dark');
   }
 
   function moveToTop(node, kind) {
-    if (kind == 'themeToggle' && qSelect('.story-body .series-nav')) {
-      qSelect('.story-body .series-nav').parentElement.insertAdjacentElement(
+    if (kind == 'themeToggle' && qs('.story-body .series-nav')) {
+      qs('.story-body .series-nav').parentElement.insertAdjacentElement(
         'beforebegin',
         node
       );
     } else if (kind == 'themeToggle') {
-      qSelect(
+      qs(
         '.story-body .dateline, .story-body > p:first-of-type'
       ).insertAdjacentElement('beforebegin', node);
     } else {
-      qSelect(
+      qs(
         '.story-body .dateline, .story-body > p:first-of-type'
       ).insertAdjacentElement('beforebegin', node);
     }
@@ -45,7 +45,6 @@
   :global(.story-body) {
     transition: all 200ms ease-in;
   }
-  
   .theme-toggle {
     --size: 40px;
     cursor: pointer;
@@ -57,7 +56,7 @@
     box-sizing: border-box;
     border: 2px solid var(--tc, #222);
     border-radius: 100%;
-    color: var(--tc);
+    background-color: var(--tc);
   }
 
   :global(.dark) .theme-toggle:hover {
@@ -71,6 +70,7 @@
   }
 
   .theme-toggle :global(svg) {
+    fill: var(--lc);
     width: 100%;
     height: 100%;
   }

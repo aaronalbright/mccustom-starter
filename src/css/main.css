@@ -2,12 +2,29 @@
   transition: all 200ms ease-in;
 }
 
-.dark {
+body.dark {
   --body-background: #373737;
   & .story-body {
     --paper-color: #1a1b22;
     --tc: #e8e8e8;
     --lc: #6583e6;
+  }
+  & .masthead {
+    --paper-color: #1a1b22;
+    --tc: #bdbdbd;
+    --lc: var(--tc);
+  }
+  & .sds-flag {
+    --tc: #bdbdbd;
+  }
+  & a.flag-logo img {
+    filter: brightness(20) saturate(0);
+  }
+  & .flag-nav {
+    --border-color: hsl(233, 8%, 60%);
+  }
+  & a[href="/weather"] img {
+    filter: brightness(6);
   }
   & .h3,
   & h3,
