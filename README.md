@@ -99,17 +99,16 @@ Usage:
 
 <p class="summary">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolore consequatur dolor. Fuga accusamus, voluptatum nesciunt et blanditiis corrupti id quos animi sit! Incidunt temporibus voluptate dicta. Aliquid, corrupti recusandae.</p>
 ```
-### *Dark Mode preivew with `<ThemeToggle>`*
+**Dark Mode preivew with `<ThemeToggle>`**
 
 ![darkMode](docs/img/darkmode.png)
-
----
+=====
 
 ### **`<FuseNav>`**
 
 This is an enhancment component that adds an animated "stikcy" navigation to story pages that have a CUE-configured **Series Nav**. If there is no Series Nav embeded on the page this component will do nothing. You can fetch an HTML snippet of Series Nav from a live page and drop it into the `.story-body` in `./partials/base.html` to test the componnent.
 
-### *`<FuseNav>` preivew with `<ThemeToggle>` dark mode enabled and custom home button*
+**`<FuseNav>` preivew with `<ThemeToggle>` dark mode enabled and custom home button**
 
 ![darkMode](docs/img/stickynav.png)
 
