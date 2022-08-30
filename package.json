@@ -28,7 +28,7 @@
     "postcss-nesting": "^10.1.4",
     "svelte": "^3.47.0",
     "svelte-preprocess": "^4.10.6",
-    "vite": "^2.9.5",
+    "vite": "^2.9.13",
     "vite-plugin-handlebars": "^1.6.0"
   }
 }
